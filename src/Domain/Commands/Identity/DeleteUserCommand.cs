@@ -14,6 +14,7 @@ using siwar.Data.Infrastructure;
 using siwar.Domain.Extensions;
 using siwar.Domain.Interfaces;
 using siwar.Domain.Queries;
+using siwar.Data;
 
 namespace siwar.Domain.Commands.Identity;
 
@@ -31,16 +32,16 @@ public class DeleteUserHandler : IRequestHandler<DeleteUserCommand, IdentityResu
 {
     private readonly ILogger<DeleteUserHandler> _logger;
     private readonly ICurrentUserService _currentUserService;
-    private readonly siwarContext _siwarContext;
+    private readonly MonitoringContext _MonitoringContext;
     private readonly UserManager<User> _userManager;
     private readonly IUserQueries _userQueries;
 
     public DeleteUserHandler(ILogger<DeleteUserHandler> logger, IUserQueries userQueries,
-        siwarContext siwarContext, UserManager<User> userManager, ICurrentUserService currentUserService)
+        MonitoringContext MonitoringContext, UserManager<User> userManager, ICurrentUserService currentUserService)
     {
         _logger = logger;
         _currentUserService = currentUserService;
-        _siwarContext = siwarContext;
+        _MonitoringContext = MonitoringContext;
         _userManager = userManager;
         _userQueries = userQueries;
     }
@@ -66,7 +67,7 @@ public class DeleteUserHandler : IRequestHandler<DeleteUserCommand, IdentityResu
 
         // Delete related data
         // user roles
-        await _siwarContext.UserRoles.Where(x => x.UserId.Equals(user.Id)).BatchDeleteAsync(cancellationToken);
+        await _MonitoringContext.UserRoles.Where(x => x.UserId.Equals(user.Id)).BatchDeleteAsync(cancellationToken);
         // user
         var result = await _userManager.DeleteAsync(user);
         if (!result.Succeeded)

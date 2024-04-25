@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using SQLitePCL;
 using siwar.Domain.Models;
 using siwar.Data;
+using siwar.Models;
 
 
 
@@ -25,9 +26,9 @@ namespace OeuilDeSauron.Controllers
 
         // GET: api/Projects
         [HttpGet]
-        public string  GetProjects()
+        public async Task<IActionResult> GetProjects()
         {
-            var projects = await _context.Projects.ToListAsync();
+            var projects = _context.Projects.ToListAsync();
             return Ok(projects);
         }
 

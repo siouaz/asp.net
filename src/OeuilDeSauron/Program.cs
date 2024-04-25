@@ -22,7 +22,7 @@ using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Serilog;
-
+using Microsoft.EntityFrameworkCore;
 using siwar;
 using siwar.Data.Identity;
 using siwar.Data.Infrastructure;
@@ -35,10 +35,11 @@ using siwar.Infrastructure;
 using siwar.Services;
 using siwar.Telemetry;
 using System.Net;
+using siwar.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 var supportedCultures = new List<CultureInfo> { new("fr-FR") };
-builder.Services.AddDbContext<MonotoringContext>(opt => opt.UseInMemoryDatabase("YourDatabase"));
+builder.Services.AddDbContext<MonitoringContext>(opt => opt.UseInMemoryDatabase("YourDatabaseName"));
 
 
 // Logging
@@ -67,7 +68,7 @@ if (builder.Environment.IsDevelopment())
 
 // Health Checks
 builder.Services.AddHealthChecks()
-    .AddDbContextCheck<siwarContext>("DbContext")
+    .AddDbContextCheck<MonitoringContext>("DbContext")
     .AddSqlServer(builder.Configuration.GetConnectionString("siwar"), name: "Azure SQL Database - siwar",
         tags: new[] { "Azure", "SQL" })
     .AddSqlServer(builder.Configuration.GetConnectionString("siwar-Jobs"), name: "Azure SQL Database - Jobs",
@@ -78,7 +79,7 @@ builder.Services.AddHealthChecks()
 
 // Identity
 builder.Services.AddIdentity<User, Role>(options => options.User.RequireUniqueEmail = true)
-    .AddEntityFrameworkStores<siwarContext>()
+    .AddEntityFrameworkStores<MonitoringContext>()
     .AddDefaultTokenProviders();
 builder.Services.Configure<IdentityOptions>(options =>
 {
@@ -155,7 +156,7 @@ builder.Services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
 // Hangfire
 builder.Services.AddHangfire(config =>
         config.UseConsole()
-            .UseSqlServerStorage(builder.Configuration.GetConnectionString("siwar-Jobs")))
+            .UseSqlServerStorage(builder.Configuration.GetConnectionString("ConnectionString")))
     .AddHangfireConsoleExtensions();
 builder.Services.AddHangfireServer(options => options.WorkerCount = 1);
 

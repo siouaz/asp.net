@@ -18,6 +18,7 @@ using siwar.Data.Identity;
 using siwar.Domain.Mapping;
 using siwar.Domain.Services;
 using siwar.Domain.Behaviours;
+using siwar.Data;
 
 namespace siwar;
 
@@ -33,7 +34,7 @@ public static class DomainServiceCollectionExtensions
         IHostEnvironment environment)
     {
         // Entity Framework
-        services.AddDbContext<siwarContext>(options =>
+        services.AddDbContext<MonitoringContext>(options =>
         {
             options
                 .UseSqlServer(

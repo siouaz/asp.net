@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
+using siwar.Domain;
 using siwar.Infrastructure.Files;
 
 namespace siwar.Controllers;
@@ -40,7 +40,7 @@ public class DocumentController : ControllerBase
         return Ok(files);
     }
 
-    [Authorize(Roles = Domain.Roles.GlobalAdministratorRole)]
+    [Authorize(Roles = Roles.GlobalAdministratorRole)]
     [HttpPost("{*folder}")]
     public async Task<IActionResult> UploadFilesAsync(string folder, IList<IFormFile> files)
     {
@@ -67,7 +67,7 @@ public class DocumentController : ControllerBase
         return File(stream, file.ContentType, file.OriginalName);
     }
 
-    [Authorize(Roles = Domain.Roles.GlobalAdministratorRole)]
+    [Authorize(Roles = Roles.GlobalAdministratorRole)]
     [HttpDelete("{*path}")]
     public async Task<IActionResult> DeleteFileAsync(string path)
     {

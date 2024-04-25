@@ -8,6 +8,7 @@ using MediatR;
 using siwar.Data.Infrastructure;
 using siwar.Domain.Models.Identity;
 using siwar.Domain.Services;
+using siwar.Data;
 
 namespace siwar.Domain.Commands.Identity
 {
@@ -30,14 +31,14 @@ namespace siwar.Domain.Commands.Identity
 
     public class UpdateUserHandler : IRequestHandler<UpdateUserCommand, Unit>
     {
-        private readonly siwarContext _siwarContext;
+        private readonly MonitoringContext _MonitoringContext;
         private readonly IUserService _userService;
 
         public UpdateUserHandler(
-            siwarContext siwarContext,
+            MonitoringContext MonitoringContext,
             IUserService userService)
         {
-            _siwarContext = siwarContext;
+            _MonitoringContext = MonitoringContext;
             _userService = userService;
         }
 
@@ -45,10 +46,10 @@ namespace siwar.Domain.Commands.Identity
         {
             // Transaction
             // Ref : https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/work-with-data-in-asp-net-core-apps#execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts
-            var strategy = _siwarContext.Database.CreateExecutionStrategy();
+            var strategy = _MonitoringContext.Database.CreateExecutionStrategy();
             await strategy.ExecuteAsync(async () =>
             {
-                using var transaction = await _siwarContext.Database.BeginTransactionAsync(cancellationToken);
+                using var transaction = await _MonitoringContext.Database.BeginTransactionAsync(cancellationToken);
                 try
                 {
                     await _userService.UpdateUserAsync(request.User.Id, request.User, cancellationToken);

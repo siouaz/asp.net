@@ -9,13 +9,13 @@ namespace siwar.Data.Infrastructure.Repositories
     /// <inheritdoc/>
     public class UserRepository : IUserRepository
     {
-        private readonly siwarContext _context;
+        private readonly MonitoringContext _context;
 
         /// <inheritdoc/>
-        public IUnitOfWork UnitOfWork => _context;
+        public IUnitOfWork UnitOfWork => (IUnitOfWork)_context;
         public DbSet<User> GetDbSet() => _context.Users;
 
-        public UserRepository(siwarContext context) =>
+        public UserRepository(MonitoringContext context) =>
             _context = context;
 
         /// <inheritdoc/>

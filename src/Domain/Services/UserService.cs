@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-
+using siwar.Data;
 using siwar.Data.Identity;
 using siwar.Data.Infrastructure;
 using siwar.Domain.Extensions;
@@ -25,7 +25,7 @@ public class UserService : IUserService
     private readonly ICurrentUserService _current;
     private readonly ILogger<UserService> _logger;
     private readonly IUserLoginRepository _loginRepository;
-    private readonly siwarContext _context;
+    private readonly MonitoringContext _context;
     private readonly UserManager<User> _userManager;
     private readonly IUserQueries _userQueries;
 
@@ -33,7 +33,7 @@ public class UserService : IUserService
         ICurrentUserService current,
         ILogger<UserService> logger,
         IUserLoginRepository loginRepository,
-        siwarContext context,
+        MonitoringContext context,
         UserManager<User> userManager,
         IUserQueries userQueries)
     {

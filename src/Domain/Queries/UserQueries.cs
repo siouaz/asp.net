@@ -14,6 +14,7 @@ using siwar.Domain.Models.Identity;
 using siwar.Data.Pagination;
 using siwar.Domain.Interfaces;
 using siwar.Domain.Extensions;
+using siwar.Data;
 
 namespace siwar.Domain.Queries;
 
@@ -21,15 +22,15 @@ public class UserQueries : IUserQueries
 {
     private readonly ICurrentUserService _currentUserService;
     private readonly IMapper _mapper;
-    private readonly siwarContext _siwarContext;
+    private readonly MonitoringContext _MonitoringContext;
     private readonly UserManager<User> _userManager;
 
-    public UserQueries(ICurrentUserService currentUserService, IMapper mapper, siwarContext siwarContext,
+    public UserQueries(ICurrentUserService currentUserService, IMapper mapper, MonitoringContext MonitoringContext,
         UserManager<User> userManager)
     {
         _currentUserService = currentUserService;
         _mapper = mapper;
-        _siwarContext = siwarContext;
+        _MonitoringContext = MonitoringContext;
         _userManager = userManager;
     }
 

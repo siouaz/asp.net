@@ -8,6 +8,7 @@ using siwar.Data.Infrastructure;
 using siwar.Domain.Models.Identity;
 using siwar.Domain.Services;
 using System;
+using siwar.Data;
 
 namespace siwar.Domain.Commands.Identity
 {
@@ -25,24 +26,24 @@ namespace siwar.Domain.Commands.Identity
 
     public class CreateUserHandler : IRequestHandler<CreateUserCommand, string>
     {
-        private readonly siwarContext _siwarContext;
+        private readonly MonitoringContext _MonitoringContext;
         private readonly IUserService _userService;
 
         public CreateUserHandler(
-            siwarContext siwarContext,
+            MonitoringContext MonitoringContext,
             IUserService userService)
         {
-            _siwarContext = siwarContext;
+            _MonitoringContext = MonitoringContext;
             _userService = userService;
         }
 
         public async Task<string> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
             // Transaction
-            //var strategy = _siwarContext.Database.CreateExecutionStrategy();
+            //var strategy = _MonitoringContext.Database.CreateExecutionStrategy();
             //var result = await strategy.ExecuteAsync(async () =>
             //{
-            //    using var transaction = await _siwarContext.Database.BeginTransactionAsync(cancellationToken);
+            //    using var transaction = await _MonitoringContext.Database.BeginTransactionAsync(cancellationToken);
             //    try
             //    {
             //        var userId = await _userService.CreateUserAsync(request.User, cancellationToken);

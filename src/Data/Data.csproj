@@ -18,4 +18,8 @@
     <Folder Include="Infrastructure\Migrations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Models\Models.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
 
-namespace siwar.Domain.Models
+namespace siwar.Models
 {
     public class Project
     {

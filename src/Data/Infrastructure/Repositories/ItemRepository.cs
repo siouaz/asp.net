@@ -10,11 +10,11 @@ namespace siwar.Data.Infrastructure.Repositories
 {
     public class ItemRepository : IItemRepository
     {
-        private readonly siwarContext _context;
+        private readonly MonitoringContext _context;
 
-        public IUnitOfWork UnitOfWork => _context;
+        public IUnitOfWork UnitOfWork => (IUnitOfWork)_context;
 
-        public ItemRepository(siwarContext context) =>
+        public ItemRepository(MonitoringContext context) =>
             _context = context;
 
         public DbSet<Item> GetDbSet() =>
