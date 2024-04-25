@@ -36,10 +36,12 @@ using siwar.Services;
 using siwar.Telemetry;
 using System.Net;
 using siwar.Data;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 var supportedCultures = new List<CultureInfo> { new("fr-FR") };
-builder.Services.AddDbContext<MonitoringContext>(opt => opt.UseInMemoryDatabase("YourDatabaseName"));
+var dbConnectionString = builder.Configuration.GetConnectionString("ConnectionString");
+builder.Services.AddDbContext<MonitoringContext>(options => options.UseSqlServer(dbConnectionString, builder => builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null)));
 
 
 // Logging
@@ -68,12 +70,12 @@ if (builder.Environment.IsDevelopment())
 
 // Health Checks
 builder.Services.AddHealthChecks()
-    .AddDbContextCheck<MonitoringContext>("DbContext")
-    .AddSqlServer(builder.Configuration.GetConnectionString("siwar"), name: "Azure SQL Database - siwar",
+    .AddDbContextCheck<MonitoringContext>(dbConnectionString)
+    .AddSqlServer(dbConnectionString, name: "Azure SQL Database - siwar",
         tags: new[] { "Azure", "SQL" })
-    .AddSqlServer(builder.Configuration.GetConnectionString("siwar-Jobs"), name: "Azure SQL Database - Jobs",
+    .AddSqlServer(dbConnectionString, name: "Azure SQL Database - Jobs",
         tags: new[] { "Azure", "SQL", "Hangfire" })
-    .AddAzureBlobStorage(builder.Configuration.GetConnectionString("Storage"), "documents", name: "Azure Storage",
+    .AddAzureBlobStorage(dbConnectionString, "documents", name: "Azure Storage",
         tags: new[] { "Azure", "Storage" })
     .AddHangfire(options => options.MaximumJobsFailed = 1, "Hangfire", tags: new[] { "Hangfire" });
 
@@ -81,6 +83,7 @@ builder.Services.AddHealthChecks()
 builder.Services.AddIdentity<User, Role>(options => options.User.RequireUniqueEmail = true)
     .AddEntityFrameworkStores<MonitoringContext>()
     .AddDefaultTokenProviders();
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(60);
@@ -106,7 +109,7 @@ if (!builder.Environment.IsDevelopment())
 {
     // Data Protection
     builder.Services.AddDataProtection()
-        .PersistKeysToAzureBlobStorage(builder.Configuration.GetConnectionString("Storage"),
+        .PersistKeysToAzureBlobStorage(dbConnectionString,
             builder.Configuration.GetValue<string>("DataProtection:Container"),
             builder.Configuration.GetValue<string>("DataProtection:Blob"))
         .SetApplicationName("siwar");
@@ -152,11 +155,10 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 
 // Antiforgery
 builder.Services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
-
 // Hangfire
 builder.Services.AddHangfire(config =>
         config.UseConsole()
-            .UseSqlServerStorage(builder.Configuration.GetConnectionString("ConnectionString")))
+            .UseSqlServerStorage(dbConnectionString))
     .AddHangfireConsoleExtensions();
 builder.Services.AddHangfireServer(options => options.WorkerCount = 1);
 

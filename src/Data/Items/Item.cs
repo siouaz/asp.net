@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace siwar.Data.Items
 {
@@ -34,11 +35,13 @@ namespace siwar.Data.Items
         /// </summary>
         public string Extra { get; set; }
 
+        [NotMapped]
         /// <summary>
         /// Gets or sets item parents, if any.
         /// </summary>
         public virtual ICollection<ItemRelation> Parents { get; set; }
 
+        [NotMapped]
         /// <summary>
         /// Gets or sets item Children, if any.
         /// </summary>

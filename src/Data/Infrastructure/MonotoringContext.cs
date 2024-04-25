@@ -13,13 +13,12 @@ using siwar.Models;
 
 namespace siwar.Data
 {
-    public class MonitoringContext : DbContext
+    public class MonitoringContext : IdentityDbContext
     {
         public MonitoringContext(DbContextOptions<MonitoringContext> options) : base(options)
         {
         }
         public DbSet<Project> Projects { get; set; }
-        public DbSet<IdentityUserLogin<string>> UserLogins { get; set; }
         public DbSet<List> Lists { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<User> Users { get; set; }
