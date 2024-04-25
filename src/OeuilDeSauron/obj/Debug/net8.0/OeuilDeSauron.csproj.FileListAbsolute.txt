@@ -1,0 +1,9 @@
+C:\Users\Siwar\Desktop\Socle-dotnet\src\OeuilDeSauron\obj\Debug\net8.0\OeuilDeSauron.csproj.AssemblyReference.cache
+C:\Users\Siwar\Desktop\Socle-dotnet\src\OeuilDeSauron\obj\Debug\net8.0\OeuilDeSauron.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Siwar\Desktop\Socle-dotnet\src\OeuilDeSauron\obj\Debug\net8.0\OeuilDeSauron.AssemblyInfoInputs.cache
+C:\Users\Siwar\Desktop\Socle-dotnet\src\OeuilDeSauron\obj\Debug\net8.0\OeuilDeSauron.AssemblyInfo.cs
+C:\Users\Siwar\Desktop\Socle-dotnet\src\OeuilDeSauron\obj\Debug\net8.0\OeuilDeSauron.csproj.CoreCompileInputs.cache
+C:\Users\Siwar\Desktop\Socle-dotnet\src\OeuilDeSauron\obj\Debug\net8.0\OeuilDeSauron.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Siwar\Desktop\Socle-dotnet\src\OeuilDeSauron\obj\Debug\net8.0\OeuilDeSauron.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Siwar\Desktop\Socle-dotnet\src\OeuilDeSauron\obj\Debug\net8.0\OeuilDeSauron.RazorAssemblyInfo.cache
+C:\Users\Siwar\Desktop\Socle-dotnet\src\OeuilDeSauron\obj\Debug\net8.0\OeuilDeSauron.RazorAssemblyInfo.cs

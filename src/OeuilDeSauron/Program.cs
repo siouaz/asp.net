@@ -38,6 +38,8 @@ using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 var supportedCultures = new List<CultureInfo> { new("fr-FR") };
+builder.Services.AddDbContext<MonotoringContext>(opt => opt.UseInMemoryDatabase("YourDatabase"));
+
 
 // Logging
 builder.Host.UseSerilog((context, configuration) =>
