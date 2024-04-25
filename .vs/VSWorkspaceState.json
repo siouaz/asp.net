@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\Data",
+    "\\src\\Data\\Applications",
+    "\\src\\Infrastructure",
+    "\\src\\Infrastructure\\Jobs",
+    "\\src\\siwar",
+    "\\src\\siwar\\Controllers"
+  ],
+  "SelectedNode": "\\src\\siwar\\Controllers\\AppController.cs",
+  "PreviewInSolutionExplorer": false
+}
