@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace siwar.Infrastructure.Jobs
+namespace OeuilDeSauron.Infrastructure.Jobs
 {
     /// <summary>
     /// Represents a background recurring job.

@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Localization;
 
-namespace siwar.Domain
+namespace OeuilDeSauron.Domain
 {
     /// <summary>
     /// <see cref="IResources"/> implementation.

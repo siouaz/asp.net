@@ -3,7 +3,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace siwar.Infrastructure.Mail
+namespace OeuilDeSauron.Infrastructure.Mail
 {
     /// <summary>
     /// Testing mailer.

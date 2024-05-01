@@ -2,9 +2,9 @@ using System.Threading.Tasks;
 
 using Microsoft.EntityFrameworkCore;
 
-using siwar.Data.Identity;
+using OeuilDeSauron.Data.Identity;
 
-namespace siwar.Data.Infrastructure.Repositories
+namespace OeuilDeSauron.Data.Infrastructure.Repositories
 {
     /// <inheritdoc/>
     public class UserRepository : IUserRepository

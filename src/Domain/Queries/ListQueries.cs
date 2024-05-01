@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
-using siwar.Data.Items;
-using siwar.Domain.Models;
+using OeuilDeSauron.Data.Items;
+using OeuilDeSauron.Domain.Models;
 
-namespace siwar.Domain.Queries
+namespace OeuilDeSauron.Domain.Queries
 {
     public class ListQueries : IListQueries
     {

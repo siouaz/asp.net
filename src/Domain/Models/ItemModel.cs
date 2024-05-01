@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace siwar.Domain.Models
+namespace OeuilDeSauron.Domain.Models
 {
     public class ItemModel
     {

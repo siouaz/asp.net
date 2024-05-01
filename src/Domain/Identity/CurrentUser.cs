@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-using siwar.Domain.Models;
+using OeuilDeSauron.Domain.Models;
 
-namespace siwar.Domain.Identity
+namespace OeuilDeSauron.Domain.Identity
 {
     /// <summary>
     /// Logged-in user.

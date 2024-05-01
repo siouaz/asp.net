@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace siwar.Data;
+namespace OeuilDeSauron.Data;
 
 /// <summary>
 /// Encapsulates a unit of work.

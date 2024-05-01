@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 
 using Microsoft.EntityFrameworkCore;
 
-using siwar.Data.Items;
+using OeuilDeSauron.Data.Items;
 
-namespace siwar.Data.Infrastructure.Repositories
+namespace OeuilDeSauron.Data.Infrastructure.Repositories
 {
     public class ItemRepository : IItemRepository
     {

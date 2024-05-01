@@ -5,13 +5,13 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-using siwar.Data.Pagination;
-using siwar.Domain;
-using siwar.Domain.Commands;
-using siwar.Domain.Models;
-using siwar.Domain.Queries;
+using OeuilDeSauron.Data.Pagination;
+using OeuilDeSauron.Domain;
+using OeuilDeSauron.Domain.Commands;
+using OeuilDeSauron.Domain.Models;
+using OeuilDeSauron.Domain.Queries;
 
-namespace siwar.Controllers;
+namespace OeuilDeSauron.Controllers;
 
 [Authorize]
 [ApiController]

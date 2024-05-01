@@ -1,7 +1,7 @@
 using System.Net.Mail;
 using System.Threading.Tasks;
 
-namespace siwar.Infrastructure.Mail
+namespace OeuilDeSauron.Infrastructure.Mail
 {
     public interface IMailer
     {

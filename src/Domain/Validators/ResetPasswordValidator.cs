@@ -1,9 +1,9 @@
 using FluentValidation;
 using Microsoft.Extensions.Localization;
 
-using siwar.Domain.Identity;
+using OeuilDeSauron.Domain.Identity;
 
-namespace siwar.Domain.Validators;
+namespace OeuilDeSauron.Domain.Validators;
 
 /// <summary>
 /// <see cref="ResetPassword"/> validator.

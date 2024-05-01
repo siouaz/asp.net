@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using siwar.Data;
+using OeuilDeSauron.Data;
 
 #nullable disable
 
-namespace siwar.Data.Migrations
+namespace OeuilDeSauron.Data.Migrations
 {
     [DbContext(typeof(MonitoringContext))]
     partial class MonitoringContextModelSnapshot : ModelSnapshot
@@ -247,7 +247,7 @@ namespace siwar.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("siwar.Data.Items.Item", b =>
+            modelBuilder.Entity("OeuilDeSauron.Data.Items.Item", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -277,7 +277,7 @@ namespace siwar.Data.Migrations
                     b.ToTable("Items");
                 });
 
-            modelBuilder.Entity("siwar.Data.Items.ItemRelation", b =>
+            modelBuilder.Entity("OeuilDeSauron.Data.Items.ItemRelation", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -296,7 +296,7 @@ namespace siwar.Data.Migrations
                     b.ToTable("ItemRelations");
                 });
 
-            modelBuilder.Entity("siwar.Data.Items.List", b =>
+            modelBuilder.Entity("OeuilDeSauron.Data.Items.List", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -315,7 +315,7 @@ namespace siwar.Data.Migrations
                     b.ToTable("Lists");
                 });
 
-            modelBuilder.Entity("siwar.Models.Project", b =>
+            modelBuilder.Entity("OeuilDeSauron.Models.Project", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -349,7 +349,7 @@ namespace siwar.Data.Migrations
                     b.ToTable("Projects");
                 });
 
-            modelBuilder.Entity("siwar.Data.Identity.Role", b =>
+            modelBuilder.Entity("OeuilDeSauron.Data.Identity.Role", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityRole");
 
@@ -359,7 +359,7 @@ namespace siwar.Data.Migrations
                     b.HasDiscriminator().HasValue("Role");
                 });
 
-            modelBuilder.Entity("siwar.Data.Identity.User", b =>
+            modelBuilder.Entity("OeuilDeSauron.Data.Identity.User", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
@@ -387,7 +387,7 @@ namespace siwar.Data.Migrations
                     b.HasDiscriminator().HasValue("User");
                 });
 
-            modelBuilder.Entity("siwar.Data.Identity.UserRole", b =>
+            modelBuilder.Entity("OeuilDeSauron.Data.Identity.UserRole", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUserRole<string>");
 
@@ -455,9 +455,9 @@ namespace siwar.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("siwar.Data.Items.Item", b =>
+            modelBuilder.Entity("OeuilDeSauron.Data.Items.Item", b =>
                 {
-                    b.HasOne("siwar.Data.Items.List", "List")
+                    b.HasOne("OeuilDeSauron.Data.Items.List", "List")
                         .WithMany("Items")
                         .HasForeignKey("ListId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -466,13 +466,13 @@ namespace siwar.Data.Migrations
                     b.Navigation("List");
                 });
 
-            modelBuilder.Entity("siwar.Data.Identity.UserRole", b =>
+            modelBuilder.Entity("OeuilDeSauron.Data.Identity.UserRole", b =>
                 {
-                    b.HasOne("siwar.Data.Identity.Role", "Role")
+                    b.HasOne("OeuilDeSauron.Data.Identity.Role", "Role")
                         .WithMany()
                         .HasForeignKey("RoleId1");
 
-                    b.HasOne("siwar.Data.Identity.User", "User")
+                    b.HasOne("OeuilDeSauron.Data.Identity.User", "User")
                         .WithMany("Roles")
                         .HasForeignKey("UserId1");
 
@@ -481,12 +481,12 @@ namespace siwar.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("siwar.Data.Items.List", b =>
+            modelBuilder.Entity("OeuilDeSauron.Data.Items.List", b =>
                 {
                     b.Navigation("Items");
                 });
 
-            modelBuilder.Entity("siwar.Data.Identity.User", b =>
+            modelBuilder.Entity("OeuilDeSauron.Data.Identity.User", b =>
                 {
                     b.Navigation("Roles");
                 });

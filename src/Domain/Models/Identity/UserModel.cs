@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace siwar.Domain.Models.Identity
+namespace OeuilDeSauron.Domain.Models.Identity
 {
     public class UserModel
     {

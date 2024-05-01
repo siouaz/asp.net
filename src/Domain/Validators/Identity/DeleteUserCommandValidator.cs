@@ -1,9 +1,9 @@
 using Microsoft.Extensions.Localization;
 using FluentValidation;
 
-using siwar.Domain.Commands.Identity;
+using OeuilDeSauron.Domain.Commands.Identity;
 
-namespace siwar.Domain.Validators;
+namespace OeuilDeSauron.Domain.Validators;
 
 /// <summary>
 /// <see cref="CreateUserCommandValidator"/> validator.

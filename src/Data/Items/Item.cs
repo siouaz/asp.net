@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace siwar.Data.Items
+namespace OeuilDeSauron.Data.Items
 {
     /// <summary>
     /// An item is a reference that can be

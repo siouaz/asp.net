@@ -8,13 +8,13 @@ using Microsoft.EntityFrameworkCore;
 
 using AutoMapper;
 
-using siwar.Data.Identity;
-using siwar.Domain.Models.Identity;
+using OeuilDeSauron.Data.Identity;
+using OeuilDeSauron.Domain.Models.Identity;
 using System.Threading;
-using siwar.Domain.Interfaces;
+using OeuilDeSauron.Domain.Interfaces;
 using System.Security.Claims;
 
-namespace siwar.Domain.Queries
+namespace OeuilDeSauron.Domain.Queries
 {
     public class RoleQueries : IRoleQueries
     {

@@ -472,7 +472,7 @@
     <value>Le centre de formation est obligatoire</value>
   </data>
   <data name="AddedUserEmailSubject" xml:space="preserve">
-    <value>siwar - Création d'un compte</value>
+    <value>OeuilDeSauron - Création d'un compte</value>
   </data>
   <data name="ExistentEmail" xml:space="preserve">
     <value>L'adresse électronique existe déjà. Veillez la modifier.</value>

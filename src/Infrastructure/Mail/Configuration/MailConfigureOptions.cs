@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
-namespace siwar.Infrastructure.Mail.Configuration
+namespace OeuilDeSauron.Infrastructure.Mail.Configuration
 {
     public class MailConfigureOptions : IConfigureOptions<MailOptions>
     {

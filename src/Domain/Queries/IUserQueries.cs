@@ -1,11 +1,11 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-using siwar.Data.Identity;
-using siwar.Data.Pagination;
-using siwar.Domain.Models.Identity;
+using OeuilDeSauron.Data.Identity;
+using OeuilDeSauron.Data.Pagination;
+using OeuilDeSauron.Domain.Models.Identity;
 
-namespace siwar.Domain.Queries;
+namespace OeuilDeSauron.Domain.Queries;
 
 public interface IUserQueries
 {

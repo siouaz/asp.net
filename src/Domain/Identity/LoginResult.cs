@@ -1,6 +1,6 @@
 using System;
 
-namespace siwar.Domain.Identity
+namespace OeuilDeSauron.Domain.Identity
 {
     /// <summary>
     /// Login result model.

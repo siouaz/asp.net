@@ -2,9 +2,9 @@ using Microsoft.Extensions.Localization;
 
 using FluentValidation;
 
-using siwar.Domain.Commands.Identity;
+using OeuilDeSauron.Domain.Commands.Identity;
 
-namespace siwar.Domain.Validators.Identity;
+namespace OeuilDeSauron.Domain.Validators.Identity;
 
 public class UpdateProfileCommandValidator : AbstractValidator<UpdateProfileCommand>
 {

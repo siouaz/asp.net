@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace siwar.Domain;
+namespace OeuilDeSauron.Domain;
 
 /// <summary>
 /// Email templates.

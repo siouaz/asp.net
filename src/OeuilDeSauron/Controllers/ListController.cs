@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-using siwar.Domain.Queries;
+using OeuilDeSauron.Domain.Queries;
 
-namespace siwar.Controllers;
+namespace OeuilDeSauron.Controllers;
 
 [Authorize]
 [Route("api/lists")]

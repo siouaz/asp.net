@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 using Microsoft.AspNetCore.Identity;
 
-namespace siwar.Data.Identity;
+namespace OeuilDeSauron.Data.Identity;
 
 /// <summary>
 /// Application role.

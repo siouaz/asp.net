@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace siwar.Infrastructure.Mail
+namespace OeuilDeSauron.Infrastructure.Mail
 {
     /// <summary>
     /// View renderer.

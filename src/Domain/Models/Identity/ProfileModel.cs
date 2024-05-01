@@ -1,6 +1,6 @@
 using System;
 
-namespace siwar.Domain.Models.Identity
+namespace OeuilDeSauron.Domain.Models.Identity
 {
     public class ProfileModel
     {

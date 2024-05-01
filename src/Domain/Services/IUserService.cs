@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-using siwar.Domain.Identity;
-using siwar.Domain.Models.Identity;
+using OeuilDeSauron.Domain.Identity;
+using OeuilDeSauron.Domain.Models.Identity;
 
-namespace siwar.Domain.Services
+namespace OeuilDeSauron.Domain.Services
 {
     public interface IUserService
     {

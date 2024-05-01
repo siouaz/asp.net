@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 using MediatR;
 
-namespace siwar.Data;
+namespace OeuilDeSauron.Data;
 
 /// <summary>
 /// Base entity.

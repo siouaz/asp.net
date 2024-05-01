@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-using siwar.Data.Items;
+using OeuilDeSauron.Data.Items;
 
-namespace siwar.Data.Infrastructure.Configuration
+namespace OeuilDeSauron.Data.Infrastructure.Configuration
 {
     public class ItemRelationConfiguration : IEntityTypeConfiguration<ItemRelation>
     {

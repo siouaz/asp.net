@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\ademb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ademb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AspNetCore.HealthChecks.UI.Client": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Azure.Storage.Blobs": {
               "target": "Package",
               "version": "[12.19.1, )"

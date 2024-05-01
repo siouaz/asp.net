@@ -8,15 +8,15 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 
-using siwar.Data.Identity;
-using siwar.Data.Infrastructure;
-using siwar.Domain.Models.Identity;
-using siwar.Data.Pagination;
-using siwar.Domain.Interfaces;
-using siwar.Domain.Extensions;
-using siwar.Data;
+using OeuilDeSauron.Data.Identity;
+using OeuilDeSauron.Data.Infrastructure;
+using OeuilDeSauron.Domain.Models.Identity;
+using OeuilDeSauron.Data.Pagination;
+using OeuilDeSauron.Domain.Interfaces;
+using OeuilDeSauron.Domain.Extensions;
+using OeuilDeSauron.Data;
 
-namespace siwar.Domain.Queries;
+namespace OeuilDeSauron.Domain.Queries;
 
 public class UserQueries : IUserQueries
 {

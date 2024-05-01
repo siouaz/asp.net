@@ -8,7 +8,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 using Microsoft.IdentityModel.Tokens;
 
-namespace siwar.Infrastructure.Files
+namespace OeuilDeSauron.Infrastructure.Files
 {
     /// <summary>
     /// Azure storage file manager.

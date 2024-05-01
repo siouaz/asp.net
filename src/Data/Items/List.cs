@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace siwar.Data.Items
+namespace OeuilDeSauron.Data.Items
 {
     /// <summary>
     /// Represents a group of items.

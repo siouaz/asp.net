@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace siwar.Data.Applications;
+namespace OeuilDeSauron.Data.Applications;
 
 /// <summary>
 /// <see cref="IApplicationRepository"/> repository.

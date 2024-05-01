@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore;
 
 using MediatR;
 
-using siwar.Data.Infrastructure;
-using siwar.Domain.Models.Identity;
-using siwar.Domain.Services;
-using siwar.Data;
+using OeuilDeSauron.Data.Infrastructure;
+using OeuilDeSauron.Domain.Models.Identity;
+using OeuilDeSauron.Domain.Services;
+using OeuilDeSauron.Data;
 
-namespace siwar.Domain.Commands.Identity
+namespace OeuilDeSauron.Domain.Commands.Identity
 {
     public class UpdateUserCommand : IRequest<Unit>
     {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace siwar.Infrastructure.Mail.Configuration
+namespace OeuilDeSauron.Infrastructure.Mail.Configuration
 {
     public class MailOptions
     {

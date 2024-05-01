@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace siwar.Data.Items
+namespace OeuilDeSauron.Data.Items
 {
     public class ItemRelation
     {

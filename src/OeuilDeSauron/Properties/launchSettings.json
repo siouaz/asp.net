@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "siwar": {
+    "OeuilDeSauron": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-using siwar.Data.Identity;
+using OeuilDeSauron.Data.Identity;
 
-namespace siwar.Data.Infrastructure.Configuration;
+namespace OeuilDeSauron.Data.Infrastructure.Configuration;
 
 /// <summary>
 /// <see cref="UserRoleConfiguration"/> entity configuration.

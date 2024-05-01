@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace siwar.Domain.Interfaces
+namespace OeuilDeSauron.Domain.Interfaces
 {
     public interface ICurrentUserService
     {

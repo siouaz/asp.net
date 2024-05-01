@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace siwar.Data.Pagination
+namespace OeuilDeSauron.Data.Pagination
 {
     /// <summary>
     /// Represents a paged list of items.

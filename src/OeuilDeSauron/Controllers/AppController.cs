@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace siwar.Controllers;
+namespace OeuilDeSauron.Controllers;
 
 /// <summary>
 /// App controller.

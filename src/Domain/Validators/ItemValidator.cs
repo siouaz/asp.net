@@ -1,9 +1,9 @@
 using FluentValidation;
 using Microsoft.Extensions.Localization;
 
-using siwar.Domain.Models;
+using OeuilDeSauron.Domain.Models;
 
-namespace siwar.Domain.Validators;
+namespace OeuilDeSauron.Domain.Validators;
 
 public class ItemValidator : AbstractValidator<ItemModel>
 {

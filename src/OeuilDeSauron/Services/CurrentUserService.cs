@@ -3,9 +3,9 @@ using System.Security.Claims;
 
 using Microsoft.AspNetCore.Http;
 
-using siwar.Domain.Interfaces;
+using OeuilDeSauron.Domain.Interfaces;
 
-namespace siwar.Services
+namespace OeuilDeSauron.Services
 {
     public class CurrentUserService : ICurrentUserService
     {

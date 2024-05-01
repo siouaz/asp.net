@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-using siwar.Data.Identity;
-using siwar.Domain.Models.Identity;
+using OeuilDeSauron.Data.Identity;
+using OeuilDeSauron.Domain.Models.Identity;
 
-namespace siwar.Domain.Queries;
+namespace OeuilDeSauron.Domain.Queries;
 
 public interface IRoleQueries
 {

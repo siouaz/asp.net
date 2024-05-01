@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using siwar.Domain;
-using siwar.Infrastructure.Files;
+using OeuilDeSauron.Domain;
+using OeuilDeSauron.Infrastructure.Files;
 
-namespace siwar.Controllers;
+namespace OeuilDeSauron.Controllers;
 
 /// <summary>
 /// Document controller.

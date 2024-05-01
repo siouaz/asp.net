@@ -8,12 +8,12 @@ using Microsoft.AspNetCore.Mvc;
 
 using MediatR;
 
-using siwar.Domain.Identity;
-using siwar.Domain.Queries;
-using siwar.Domain.Models.Identity;
-using siwar.Domain.Commands.Identity;
+using OeuilDeSauron.Domain.Identity;
+using OeuilDeSauron.Domain.Queries;
+using OeuilDeSauron.Domain.Models.Identity;
+using OeuilDeSauron.Domain.Commands.Identity;
 
-namespace siwar.Controllers.Identity
+namespace OeuilDeSauron.Controllers.Identity
 {
     /// <summary>
     /// Role controller.

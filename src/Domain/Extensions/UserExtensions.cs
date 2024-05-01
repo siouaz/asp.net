@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 
-using siwar.Data.Identity;
+using OeuilDeSauron.Data.Identity;
 
-namespace siwar.Domain.Extensions;
+namespace OeuilDeSauron.Domain.Extensions;
 
 public static class UserExtensions
 {

@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using siwar.Data;
-using siwar.Data.Identity;
-using siwar.Data.Infrastructure;
-using siwar.Domain.Extensions;
-using siwar.Domain.Identity;
-using siwar.Domain.Interfaces;
-using siwar.Domain.Models.Identity;
-using siwar.Domain.Queries;
+using OeuilDeSauron.Data;
+using OeuilDeSauron.Data.Identity;
+using OeuilDeSauron.Data.Infrastructure;
+using OeuilDeSauron.Domain.Extensions;
+using OeuilDeSauron.Domain.Identity;
+using OeuilDeSauron.Domain.Interfaces;
+using OeuilDeSauron.Domain.Models.Identity;
+using OeuilDeSauron.Domain.Queries;
 
-namespace siwar.Domain.Services;
+namespace OeuilDeSauron.Domain.Services;
 
 public class UserService : IUserService
 {

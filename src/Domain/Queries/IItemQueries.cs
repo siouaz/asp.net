@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-using siwar.Data.Pagination;
-using siwar.Domain.Models;
+using OeuilDeSauron.Data.Pagination;
+using OeuilDeSauron.Domain.Models;
 
-namespace siwar.Domain.Queries
+namespace OeuilDeSauron.Domain.Queries
 {
     public interface IItemQueries
     {

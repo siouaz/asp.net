@@ -1,4 +1,4 @@
-namespace siwar.Data.Pagination
+namespace OeuilDeSauron.Data.Pagination
 {
     /// <summary>
     /// Sort direction.

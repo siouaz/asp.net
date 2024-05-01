@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace siwar.Domain.Exceptions
+namespace OeuilDeSauron.Domain.Exceptions
 {
     /// <summary>
     /// Base business exception.

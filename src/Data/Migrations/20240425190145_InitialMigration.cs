@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace siwar.Data.Migrations
+namespace OeuilDeSauron.Data.Migrations
 {
     /// <inheritdoc />
     public partial class InitialMigration : Migration

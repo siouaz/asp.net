@@ -1,4 +1,4 @@
-namespace siwar.Domain
+namespace OeuilDeSauron.Domain
 {
     /// <summary>
     /// Shared resource messages.

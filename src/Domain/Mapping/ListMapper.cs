@@ -1,9 +1,9 @@
 using AutoMapper;
 
-using siwar.Data.Items;
-using siwar.Domain.Models;
+using OeuilDeSauron.Data.Items;
+using OeuilDeSauron.Domain.Models;
 
-namespace siwar.Domain.Mapping
+namespace OeuilDeSauron.Domain.Mapping
 {
     public class ListMapper : Profile
     {

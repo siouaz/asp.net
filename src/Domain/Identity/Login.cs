@@ -1,4 +1,4 @@
-namespace siwar.Domain.Identity
+namespace OeuilDeSauron.Domain.Identity
 {
     /// <summary>
     /// Login model.

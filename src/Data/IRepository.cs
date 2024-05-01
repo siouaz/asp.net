@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace siwar.Data;
+namespace OeuilDeSauron.Data;
 
 /// <summary>
 /// Handles operations over aggregate objects.

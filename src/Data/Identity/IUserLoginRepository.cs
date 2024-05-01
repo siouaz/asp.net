@@ -2,7 +2,7 @@ using System.Linq;
 
 using Microsoft.AspNetCore.Identity;
 
-namespace siwar.Data.Identity;
+namespace OeuilDeSauron.Data.Identity;
 
 public interface IUserLoginRepository : IRepository<IdentityUserLogin<string>>
 {

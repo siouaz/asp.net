@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace siwar.Data;
+namespace OeuilDeSauron.Data;
 
 /// <summary>
 /// Mediator database context extensions.

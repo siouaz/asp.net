@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-using siwar.Data.Items;
+using OeuilDeSauron.Data.Items;
 
-namespace siwar.Domain.Commands;
+namespace OeuilDeSauron.Domain.Commands;
 
 public class RemoveItem : IRequest<bool>
 {

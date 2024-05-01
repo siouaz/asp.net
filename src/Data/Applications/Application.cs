@@ -2,9 +2,9 @@ using System;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.WebUtilities;
 
-using siwar.Data.Identity;
+using OeuilDeSauron.Data.Identity;
 
-namespace siwar.Data.Applications;
+namespace OeuilDeSauron.Data.Applications;
 
 /// <summary>
 /// Consumer application.

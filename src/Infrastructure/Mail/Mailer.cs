@@ -6,9 +6,9 @@ using Microsoft.Extensions.Options;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 
-using siwar.Infrastructure.Mail.Configuration;
+using OeuilDeSauron.Infrastructure.Mail.Configuration;
 
-namespace siwar.Infrastructure.Mail
+namespace OeuilDeSauron.Infrastructure.Mail
 {
     public class Mailer : IMailer
     {

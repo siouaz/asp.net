@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace siwar.Data.Items
+namespace OeuilDeSauron.Data.Items
 {
     /// <summary>
     /// <see cref="Item"/> repository.

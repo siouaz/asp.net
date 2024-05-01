@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace siwar.Data.Identity
+namespace OeuilDeSauron.Data.Identity
 {
     /// <summary>
     /// User structure relation.

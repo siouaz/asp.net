@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace siwar.Data.Infrastructure.Configuration;
+namespace OeuilDeSauron.Data.Infrastructure.Configuration;
 
 /// <summary>
 /// Converts an object to and from a Json string.

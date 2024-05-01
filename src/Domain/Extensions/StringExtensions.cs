@@ -2,7 +2,7 @@ using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace siwar.Domain.Extensions;
+namespace OeuilDeSauron.Domain.Extensions;
 
 /// <summary>
 /// String extensions.

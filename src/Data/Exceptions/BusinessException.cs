@@ -1,6 +1,6 @@
 using System;
 
-namespace siwar.Data.Exceptions;
+namespace OeuilDeSauron.Data.Exceptions;
 
 public class BusinessException : Exception
 {

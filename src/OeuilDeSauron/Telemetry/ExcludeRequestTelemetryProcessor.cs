@@ -6,7 +6,7 @@ using Microsoft.ApplicationInsights.DataContracts;
 using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.Extensions.Configuration;
 
-namespace siwar.Telemetry
+namespace OeuilDeSauron.Telemetry
 {
     /// <summary>
     /// Excludes configured requests from being logged.

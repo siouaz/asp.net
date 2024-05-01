@@ -7,11 +7,11 @@ using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-using siwar.Data.Exceptions;
-using siwar.Data.Items;
-using siwar.Domain.Models;
+using OeuilDeSauron.Data.Exceptions;
+using OeuilDeSauron.Data.Items;
+using OeuilDeSauron.Domain.Models;
 
-namespace siwar.Domain.Commands;
+namespace OeuilDeSauron.Domain.Commands;
 
 public class CreateOrUpdateItem : IRequest<ItemModel>
 {

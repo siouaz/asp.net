@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Routing;
 
-namespace siwar.Infrastructure.Mail
+namespace OeuilDeSauron.Infrastructure.Mail
 {
     /// <summary>
     /// <see cref="IViewRenderer" /> implementation.

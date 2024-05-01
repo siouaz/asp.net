@@ -9,14 +9,14 @@ using Microsoft.Extensions.Logging;
 using MediatR;
 using FluentValidation;
 
-using siwar.Data.Pagination;
-using siwar.Domain.Queries;
-using siwar.Domain.Models.Identity;
-using siwar.Domain.Commands.Identity;
-using siwar.Domain.Services;
-using siwar.Domain;
+using OeuilDeSauron.Data.Pagination;
+using OeuilDeSauron.Domain.Queries;
+using OeuilDeSauron.Domain.Models.Identity;
+using OeuilDeSauron.Domain.Commands.Identity;
+using OeuilDeSauron.Domain.Services;
+using OeuilDeSauron.Domain;
 
-namespace siwar.Controllers.Identity;
+namespace OeuilDeSauron.Controllers.Identity;
 
 /// <summary>
 /// User controller.

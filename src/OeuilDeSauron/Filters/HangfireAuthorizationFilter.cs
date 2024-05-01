@@ -1,6 +1,6 @@
 using Hangfire.Dashboard;
 
-namespace siwar.Filters
+namespace OeuilDeSauron.Filters
 {
     /// <summary>
     /// Hangfire authorization filter.

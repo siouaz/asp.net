@@ -5,12 +5,12 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 
-using siwar.Infrastructure.Files;
-using siwar.Infrastructure.Mail;
-using siwar.Infrastructure.Mail.Configuration;
+using OeuilDeSauron.Infrastructure.Files;
+using OeuilDeSauron.Infrastructure.Mail;
+using OeuilDeSauron.Infrastructure.Mail.Configuration;
 using SendGrid.Extensions.DependencyInjection;
 
-namespace siwar.Infrastructure
+namespace OeuilDeSauron.Infrastructure
 {
     public static class InfrastructureServiceCollectionExtensions
     {

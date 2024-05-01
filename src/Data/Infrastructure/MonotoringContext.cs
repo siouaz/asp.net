@@ -5,13 +5,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MediatR;
-using siwar.Data.Identity;
-using siwar.Data.Infrastructure.Configuration;
-using siwar.Data.Items;
-using siwar.Models;
+using OeuilDeSauron.Data.Identity;
+using OeuilDeSauron.Data.Infrastructure.Configuration;
+using OeuilDeSauron.Data.Items;
+using OeuilDeSauron.Models;
 
 
-namespace siwar.Data
+namespace OeuilDeSauron.Data
 {
     public class MonitoringContext : IdentityDbContext
     {

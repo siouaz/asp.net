@@ -9,14 +9,14 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using SendGrid.Helpers.Errors.Model;
 
-using siwar.Data.Identity;
-using siwar.Data.Infrastructure;
-using siwar.Domain.Extensions;
-using siwar.Domain.Interfaces;
-using siwar.Domain.Queries;
-using siwar.Data;
+using OeuilDeSauron.Data.Identity;
+using OeuilDeSauron.Data.Infrastructure;
+using OeuilDeSauron.Domain.Extensions;
+using OeuilDeSauron.Domain.Interfaces;
+using OeuilDeSauron.Domain.Queries;
+using OeuilDeSauron.Data;
 
-namespace siwar.Domain.Commands.Identity;
+namespace OeuilDeSauron.Domain.Commands.Identity;
 
 public class DeleteUserCommand : IRequest<IdentityResult>
 {

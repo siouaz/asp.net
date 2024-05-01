@@ -8,19 +8,19 @@ using MediatR;
 using FluentValidation;
 using System.Reflection;
 
-using siwar.Data.Infrastructure;
-using siwar.Data.Infrastructure.Repositories;
-using siwar.Data.Items;
-using siwar.Domain;
-using siwar.Domain.Queries;
-using siwar.Infrastructure;
-using siwar.Data.Identity;
-using siwar.Domain.Mapping;
-using siwar.Domain.Services;
-using siwar.Domain.Behaviours;
-using siwar.Data;
+using OeuilDeSauron.Data.Infrastructure;
+using OeuilDeSauron.Data.Infrastructure.Repositories;
+using OeuilDeSauron.Data.Items;
+using OeuilDeSauron.Domain;
+using OeuilDeSauron.Domain.Queries;
+using OeuilDeSauron.Infrastructure;
+using OeuilDeSauron.Data.Identity;
+using OeuilDeSauron.Domain.Mapping;
+using OeuilDeSauron.Domain.Services;
+using OeuilDeSauron.Domain.Behaviours;
+using OeuilDeSauron.Data;
 
-namespace siwar;
+namespace OeuilDeSauron;
 
 /// <summary>
 /// Service collection extensions.
@@ -38,7 +38,7 @@ public static class DomainServiceCollectionExtensions
         {
             options
                 .UseSqlServer(
-                    configuration.GetConnectionString("siwar"),
+                    configuration.GetConnectionString("OeuilDeSauron"),
                     sql => sql.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null)
                         .CommandTimeout(60))
                 .EnableSensitiveDataLogging(environment.IsDevelopment());

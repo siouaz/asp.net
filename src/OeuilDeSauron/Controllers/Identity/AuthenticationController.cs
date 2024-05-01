@@ -11,13 +11,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
-using siwar.Data.Identity;
-using siwar.Domain;
-using siwar.Domain.Identity;
-using siwar.Domain.Queries;
-using siwar.Infrastructure.Mail;
+using OeuilDeSauron.Data.Identity;
+using OeuilDeSauron.Domain;
+using OeuilDeSauron.Domain.Identity;
+using OeuilDeSauron.Domain.Queries;
+using OeuilDeSauron.Infrastructure.Mail;
 
-namespace siwar.Controllers.Identity;
+namespace OeuilDeSauron.Controllers.Identity;
 
 /// <summary>
 /// Authentication controller.

@@ -23,19 +23,19 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Serilog;
 using Microsoft.EntityFrameworkCore;
-using siwar;
-using siwar.Data.Identity;
-using siwar.Data.Infrastructure;
-using siwar.Domain;
-using siwar.Domain.Extensions;
-using siwar.Domain.Interfaces;
-using siwar.Filters;
-using siwar.Hosting;
-using siwar.Infrastructure;
-using siwar.Services;
-using siwar.Telemetry;
+using OeuilDeSauron;
+using OeuilDeSauron.Data.Identity;
+using OeuilDeSauron.Data.Infrastructure;
+using OeuilDeSauron.Domain;
+using OeuilDeSauron.Domain.Extensions;
+using OeuilDeSauron.Domain.Interfaces;
+using OeuilDeSauron.Filters;
+using OeuilDeSauron.Hosting;
+using OeuilDeSauron.Infrastructure;
+using OeuilDeSauron.Services;
+using OeuilDeSauron.Telemetry;
 using System.Net;
-using siwar.Data;
+using OeuilDeSauron.Data;
 using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -69,15 +69,17 @@ if (builder.Environment.IsDevelopment())
 }
 
 // Health Checks
-builder.Services.AddHealthChecks()
-    .AddDbContextCheck<MonitoringContext>(dbConnectionString)
-    .AddSqlServer(dbConnectionString, name: "Azure SQL Database - siwar",
-        tags: new[] { "Azure", "SQL" })
-    .AddSqlServer(dbConnectionString, name: "Azure SQL Database - Jobs",
-        tags: new[] { "Azure", "SQL", "Hangfire" })
-    .AddAzureBlobStorage(dbConnectionString, "documents", name: "Azure Storage",
-        tags: new[] { "Azure", "Storage" })
-    .AddHangfire(options => options.MaximumJobsFailed = 1, "Hangfire", tags: new[] { "Hangfire" });
+//builder.Services.AddHealthChecks()
+//    .AddDbContextCheck<MonitoringContext>(dbConnectionString)
+//    .AddSqlServer(dbConnectionString, name: "Azure SQL Database - OeuilDeSauron",
+//        tags: new[] { "Azure", "SQL" })
+//    .AddSqlServer(dbConnectionString, name: "Azure SQL Database - Jobs",
+//        tags: new[] { "Azure", "SQL", "Hangfire" })
+//    .AddAzureBlobStorage(dbConnectionString, "documents", name: "Azure Storage",
+//        tags: new[] { "Azure", "Storage" })
+//    .AddHangfire(options => options.MaximumJobsFailed = 1, "Hangfire", tags: new[] { "Hangfire" });
+
+builder.Services.AddHealthChecks();
 
 // Identity
 builder.Services.AddIdentity<User, Role>(options => options.User.RequireUniqueEmail = true)
@@ -112,7 +114,7 @@ if (!builder.Environment.IsDevelopment())
         .PersistKeysToAzureBlobStorage(dbConnectionString,
             builder.Configuration.GetValue<string>("DataProtection:Container"),
             builder.Configuration.GetValue<string>("DataProtection:Blob"))
-        .SetApplicationName("siwar");
+        .SetApplicationName("OeuilDeSauron");
 }
 
 // Cache
@@ -239,8 +241,11 @@ app.UseResponseCaching();
 app.UseMiniProfiler();
 
 // Mvc
-app.MapHealthChecks("/health",
-        new HealthCheckOptions { Predicate = _ => true, ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse });
+//app.MapHealthChecks("/health",
+//        new HealthCheckOptions { Predicate = _ => true, ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse });
+
+app.MapHealthChecks("health");
+
 app.MapControllerRoute("default", "{controller=App}/{action=Index}");
 app.MapHangfireDashboard("/hangfire", new DashboardOptions
 {

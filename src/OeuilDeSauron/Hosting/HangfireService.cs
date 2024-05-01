@@ -6,9 +6,9 @@ using Hangfire;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-using siwar.Infrastructure.Jobs;
+using OeuilDeSauron.Infrastructure.Jobs;
 
-namespace siwar.Hosting
+namespace OeuilDeSauron.Hosting
 {
     /// <summary>
     /// Hangfire recurrent jobs subscription service.

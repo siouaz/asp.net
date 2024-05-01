@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace siwar.Data.Identity;
+namespace OeuilDeSauron.Data.Identity;
 
 /// <summary>
 /// <see cref="User"/> repository.

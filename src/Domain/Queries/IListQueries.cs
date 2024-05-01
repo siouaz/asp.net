@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-using siwar.Domain.Models;
+using OeuilDeSauron.Domain.Models;
 
-namespace siwar.Domain.Queries
+namespace OeuilDeSauron.Domain.Queries
 {
     public interface IListQueries
     {
