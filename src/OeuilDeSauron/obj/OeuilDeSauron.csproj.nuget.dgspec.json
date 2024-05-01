@@ -57,6 +57,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[110.2.0, )"
             }
           },
           "imports": [
@@ -156,6 +160,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[110.2.0, )"
             }
           },
           "imports": [
@@ -267,6 +275,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[110.2.0, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[7.4.0, )"
@@ -361,6 +373,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[110.2.0, )"
             },
             "SendGrid.Extensions.DependencyInjection": {
               "target": "Package",
@@ -518,6 +534,10 @@
             "NetEscapades.AspNetCore.SecurityHeaders": {
               "target": "Package",
               "version": "[0.21.0, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[110.2.0, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",

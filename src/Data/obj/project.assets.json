@@ -1499,6 +1499,22 @@
           }
         }
       },
+      "RestSharp/110.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "7.0.2"
+        },
+        "compile": {
+          "lib/net7.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SQLitePCLRaw.core/2.1.6": {
         "type": "package",
         "dependencies": {
@@ -2133,7 +2149,8 @@
         "dependencies": {
           "AspNetCore.HealthChecks.UI.Client": "8.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.4",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.4"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.4",
+          "RestSharp": "110.2.0"
         },
         "compile": {
           "bin/placeholder/Models.dll": {}
@@ -4167,6 +4184,26 @@
         "pomelo.entityframeworkcore.mysql.nuspec"
       ]
     },
+    "RestSharp/110.2.0": {
+      "sha512": "FXGw0IMcqY7yO/hzS9QrD3iNswNgb9UxJnxWmfOxmGs4kRlZWqdtBoGPLuhlbgsDzX1RFo4WKui8TGGKXWKalw==",
+      "type": "package",
+      "path": "restsharp/110.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net471/RestSharp.dll",
+        "lib/net471/RestSharp.xml",
+        "lib/net6.0/RestSharp.dll",
+        "lib/net6.0/RestSharp.xml",
+        "lib/net7.0/RestSharp.dll",
+        "lib/net7.0/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.110.2.0.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
+      ]
+    },
     "SQLitePCLRaw.core/2.1.6": {
       "sha512": "wO6v9GeMx9CUngAet8hbO7xdm+M42p1XeJq47ogyRoYSvNSp0NGLI+MgC0bhrMk9C17MTVFlLiN6ylyExLCc5w==",
       "type": "package",
@@ -5400,7 +5437,8 @@
       "Microsoft.EntityFrameworkCore >= 8.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.4",
-      "Models >= 1.0.0"
+      "Models >= 1.0.0",
+      "RestSharp >= 110.2.0"
     ]
   },
   "packageFolders": {
@@ -5483,6 +5521,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[8.0.4, )"
+          },
+          "RestSharp": {
+            "target": "Package",
+            "version": "[110.2.0, )"
           }
         },
         "imports": [

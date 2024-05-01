@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hrdsa9BZMq1QSdrPnK9BHx5cg1t8kfGNAS2yc2sXevJTYBqV9tO0492gSnZhDsk3b4zuwwrv5d8fylhcsZ/TRQ==",
+  "dgSpecHash": "bh6gvCECWPlxNQ53KD8pIibZ5z+NtOYx8pfa3EI/hkDDslWf5uwZ8h4l6kBBOz5niMWgEJRaC0L9n3waCuJSzg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
@@ -94,6 +94,7 @@
     "C:\\Users\\ademb\\.nuget\\packages\\polly\\7.2.4\\polly.7.2.4.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\8.0.0\\pomelo.entityframeworkcore.mysql.8.0.0.nupkg.sha512",
+    "C:\\Users\\ademb\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\sendgrid\\9.24.3\\sendgrid.9.24.3.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\sendgrid.extensions.dependencyinjection\\1.0.1\\sendgrid.extensions.dependencyinjection.1.0.1.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",

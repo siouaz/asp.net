@@ -37,6 +37,8 @@
     <PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.3.8" />
 
       <PackageReference Include="NetEscapades.AspNetCore.SecurityHeaders" Version="0.21.0" />
+
+      <PackageReference Include="RestSharp" Version="110.2.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
     <PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
     <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.0" />

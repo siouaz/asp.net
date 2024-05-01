@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "swXWPqI16JNNalSVTOGyzuejqKR5KUAwD33g21XIhS4kOlHZNLe1I+xx0SBrM4VcGWiKalYAqLx7AmYxADKPXg==",
+  "dgSpecHash": "G7rPPfOAbJE3uCKni8HiycP+Lp/0Zr0TuoIihAhZRcPUClCn9AdG7yllvvhMEXlQ/TzNTYymq4iZD+HxR11izw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\OeuilDeSauron\\OeuilDeSauron.csproj",
   "expectedPackageFiles": [
@@ -143,6 +143,7 @@
     "C:\\Users\\ademb\\.nuget\\packages\\polly\\7.2.4\\polly.7.2.4.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\8.0.0\\pomelo.entityframeworkcore.mysql.8.0.0.nupkg.sha512",
+    "C:\\Users\\ademb\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\sendgrid\\9.24.3\\sendgrid.9.24.3.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\sendgrid.extensions.dependencyinjection\\1.0.1\\sendgrid.extensions.dependencyinjection.1.0.1.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",

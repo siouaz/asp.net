@@ -37,6 +37,7 @@ using OeuilDeSauron.Telemetry;
 using System.Net;
 using OeuilDeSauron.Data;
 using System.Configuration;
+using OeuilDeSauron.Domain.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var supportedCultures = new List<CultureInfo> { new("fr-FR") };
@@ -79,8 +80,10 @@ if (builder.Environment.IsDevelopment())
 //        tags: new[] { "Azure", "Storage" })
 //    .AddHangfire(options => options.MaximumJobsFailed = 1, "Hangfire", tags: new[] { "Hangfire" });
 
-builder.Services.AddHealthChecks();
+//builder.Services.AddHealthChecks()
+//    .AddCheck<ChuckNorrisHealthCheck>("Chuck Norris API");
 
+builder.Services.AddScoped<IMyHealthCheck, MyHealthCheck>();
 // Identity
 builder.Services.AddIdentity<User, Role>(options => options.User.RequireUniqueEmail = true)
     .AddEntityFrameworkStores<MonitoringContext>()
@@ -244,7 +247,10 @@ app.UseMiniProfiler();
 //app.MapHealthChecks("/health",
 //        new HealthCheckOptions { Predicate = _ => true, ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse });
 
-app.MapHealthChecks("health");
+//app.MapHealthChecks("health",new HealthCheckOptions()
+//{
+//    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+//});
 
 app.MapControllerRoute("default", "{controller=App}/{action=Index}");
 app.MapHangfireDashboard("/hangfire", new DashboardOptions
