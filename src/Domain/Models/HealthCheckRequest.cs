@@ -8,6 +8,7 @@ namespace OeuilDeSauron.Domain.Models
 {
     public class HealthCheckRequest
     {
+        public string Name { get; set; }
         public string Url { get; set; }
         public IDictionary<string, string> Headers { get; set; }
     }

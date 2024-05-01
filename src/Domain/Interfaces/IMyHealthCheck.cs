@@ -21,6 +21,6 @@ namespace OeuilDeSauron.Domain.Interfaces
         /// <param name="context">A context object associated with the current execution.</param>
         /// <param name="cancellationToken">A <see cref="CancellationToken"/> that can be used to cancel the health check.</param>
         /// <returns>A <see cref="Task{HealthCheckResult}"/> that completes when the health check has finished, yielding the status of the component being checked.</returns>
-        Task<HealthCheckResult> CheckHealthAsync(HealthCheckRequest requestParameters);
+        Task<HealthCheckResponse> CheckHealthAsync(HealthCheckRequest requestParameters);
     }
 }
