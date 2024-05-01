@@ -13,7 +13,7 @@ using OeuilDeSauron.Models;
 
 namespace OeuilDeSauron.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/project")]
     [ApiController]
     public class ProjectsController : ControllerBase
     {
@@ -28,7 +28,7 @@ namespace OeuilDeSauron.Controllers
         [HttpGet]
         public async Task<IActionResult> GetProjects()
         {
-            var projects = _context.Projects.ToListAsync();
+            var projects = _context.Projects.GetAsyncEnumerator();
             return Ok(projects);
         }
 
@@ -43,7 +43,7 @@ namespace OeuilDeSauron.Controllers
 
         // GET: api/Projects/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetProject(int id)
+        public async Task<IActionResult> GetProject(string id)
         {
             var project = await _context.Projects.FindAsync(id);
             if (project == null)
@@ -55,7 +55,7 @@ namespace OeuilDeSauron.Controllers
 
         // PUT: api/Projects/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProject(int id, [FromBody] Project project)
+        public async Task<IActionResult> PutProject(string id, [FromBody] Project project)
         {
             if (id != project.Id)
             {
@@ -68,7 +68,7 @@ namespace OeuilDeSauron.Controllers
 
         // DELETE: api/Projects/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProject(int id)
+        public async Task<IActionResult> DeleteProject(string id)
         {
             var project = await _context.Projects.FindAsync(id);
             if (project == null)

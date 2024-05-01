@@ -92,14 +92,14 @@ namespace OeuilDeSauron.Data.Migrations
                 name: "Projects",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HealthcheckUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SiteUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CheckFrequency = table.Column<int>(type: "int", nullable: false),
-                    AssignedTo = table.Column<int>(type: "int", nullable: false),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                    AssignedTo = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    HeadersSerialized = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+using OeuilDeSauron.Data;
 using OeuilDeSauron.Domain;
 using OeuilDeSauron.Domain.Interfaces;
 using OeuilDeSauron.Domain.Models;
@@ -24,19 +25,33 @@ namespace OeuilDeSauron.Controllers;
 public class HealthCheckController : ControllerBase
 {
     private readonly IMyHealthCheck _healthCheck;
+    private readonly MonitoringContext _context;
 
-    public HealthCheckController(IMyHealthCheck healthCheck)
+    public HealthCheckController(IMyHealthCheck healthCheck, MonitoringContext context)
     {
         _healthCheck = healthCheck;
+        _context = context;
     }
 
-    [HttpGet()]
-    public async Task<IActionResult> CheckHealth([FromBody] HealthCheckRequest request)
+    [HttpGet("{projectId}")]
+    public async Task<IActionResult> CheckHealth(string projectId)
     {
+        var project = await _context.Projects.FindAsync(projectId);
+        if (project == null)
+        {
+            return NotFound("Project not found.");
+        }
+
+        var request = new HealthCheckRequest
+        {
+            Name = project.Name,
+            Url = project.HealthcheckUrl,
+            Headers = project.Headers
+        };
+
         var result = await _healthCheck.CheckHealthAsync(request);
         return Ok(result);
-      
     }
 
-    
+
 }

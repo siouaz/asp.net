@@ -12,7 +12,7 @@ using OeuilDeSauron.Data;
 namespace OeuilDeSauron.Data.Migrations
 {
     [DbContext(typeof(MonitoringContext))]
-    [Migration("20240425190145_InitialMigration")]
+    [Migration("20240501203514_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -320,17 +320,19 @@ namespace OeuilDeSauron.Data.Migrations
 
             modelBuilder.Entity("OeuilDeSauron.Models.Project", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AssignedTo")
-                        .HasColumnType("int");
+                    b.Property<string>("AssignedTo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CheckFrequency")
                         .HasColumnType("int");
+
+                    b.Property<string>("HeadersSerialized")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HealthcheckUrl")
                         .IsRequired()

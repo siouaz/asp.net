@@ -1524,6 +1524,7 @@
           "Microsoft.EntityFrameworkCore": "8.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.4",
           "Models": "1.0.0",
+          "Newtonsoft.Json": "13.0.3",
           "RestSharp": "110.2.0"
         },
         "runtime": {
@@ -1551,6 +1552,7 @@
           "AspNetCore.HealthChecks.UI.Client": "8.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.4",
+          "Newtonsoft.Json": "13.0.3",
           "RestSharp": "110.2.0"
         },
         "runtime": {
