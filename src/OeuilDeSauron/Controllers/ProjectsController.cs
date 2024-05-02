@@ -7,6 +7,9 @@ using SQLitePCL;
 using OeuilDeSauron.Domain.Models;
 using OeuilDeSauron.Data;
 using OeuilDeSauron.Models;
+using MediatR;
+using OeuilDeSauron.Domain.Queries.Projects;
+using OeuilDeSauron.Domain.Commands.Project;
 
 
 
@@ -18,17 +21,20 @@ namespace OeuilDeSauron.Controllers
     public class ProjectsController : ControllerBase
     {
         private readonly MonitoringContext _context;
+        private readonly IMediator _mediator;
 
-        public ProjectsController(MonitoringContext context)
+        public ProjectsController(MonitoringContext context,IMediator mediator)
         {
             _context = context;
+            _mediator = mediator;
         }
 
         // GET: api/Projects
         [HttpGet]
         public async Task<IActionResult> GetProjects()
         {
-            var projects = _context.Projects.GetAsyncEnumerator();
+            var query = new GetAllProjectsQuery();
+            var projects = await _mediator.Send(query);
             return Ok(projects);
         }
 
@@ -36,16 +42,18 @@ namespace OeuilDeSauron.Controllers
         [HttpPost]
         public async Task<IActionResult> PostProject([FromBody] Project project)
         {
-            _context.Projects.Add(project);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetProject), new { id = project.Id }, project);
+            var command = new AddProjectCommand(project);
+            var projectCreated = await _mediator.Send(command);
+            return Ok(projectCreated);
         }
 
         // GET: api/Projects/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProject(string id)
         {
-            var project = await _context.Projects.FindAsync(id);
+            var query = new GetProjectQuery(id);
+
+            var project = await _mediator.Send(query);
             if (project == null)
             {
                 return NotFound();

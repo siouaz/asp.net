@@ -84,6 +84,9 @@ if (builder.Environment.IsDevelopment())
 //    .AddCheck<ChuckNorrisHealthCheck>("Chuck Norris API");
 
 builder.Services.AddScoped<IMyHealthCheck, MyHealthCheck>();
+
+// Inject MediatR to our DI
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly));
 // Identity
 builder.Services.AddIdentity<User, Role>(options => options.User.RequireUniqueEmail = true)
     .AddEntityFrameworkStores<MonitoringContext>()

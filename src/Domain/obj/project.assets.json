@@ -2526,6 +2526,7 @@
         "dependencies": {
           "AspNetCore.HealthChecks.UI.Client": "8.0.0",
           "Azure.Storage.Blobs": "12.19.1",
+          "MediatR": "12.2.0",
           "Microsoft.EntityFrameworkCore": "8.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.4",
           "Microsoft.IdentityModel.Tokens": "7.4.0",
@@ -2549,6 +2550,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AspNetCore.HealthChecks.UI.Client": "8.0.0",
+          "MediatR": "12.2.0",
           "Microsoft.EntityFrameworkCore": "8.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.4",
           "Newtonsoft.Json": "13.0.3",

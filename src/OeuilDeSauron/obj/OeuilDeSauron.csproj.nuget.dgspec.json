@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.4, )"
@@ -360,6 +364,10 @@
               "target": "Package",
               "version": "[12.19.1, )"
             },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.4, )"
@@ -496,6 +504,10 @@
             "Hangfire.SqlServer": {
               "target": "Package",
               "version": "[1.8.11, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
             },
             "Microsoft.ApplicationInsights.AspNetCore": {
               "target": "Package",

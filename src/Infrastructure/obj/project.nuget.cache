@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1fckfeo2ze+24rF2sdLdbgSRorwTZkL+2uGk+IhSyKkNVmT8HEeXRSM2hKYOHvx0oAIEu4r3pMdsxldRsm/L/g==",
+  "dgSpecHash": "N5o0jrSWNpE9TxbPwmMA47cosPeZ0Af8Jo64GsLXp3BAl5c8ZErU/aBzE2lBcMuKTyxYWCtS9SWtB3RCqqQY2g==",
   "success": true,
   "projectFilePath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,8 @@
     "C:\\Users\\ademb\\.nuget\\packages\\azure.storage.blobs\\12.19.1\\azure.storage.blobs.12.19.1.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\azure.storage.common\\12.18.1\\azure.storage.common.12.18.1.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\ademb\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\ademb\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\ademb\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",
