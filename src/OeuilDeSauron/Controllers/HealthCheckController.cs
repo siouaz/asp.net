@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +10,7 @@ using OeuilDeSauron.Data;
 using OeuilDeSauron.Domain;
 using OeuilDeSauron.Domain.Interfaces;
 using OeuilDeSauron.Domain.Models;
+using OeuilDeSauron.Domain.Queries.CheckHealthQueries;
 using OeuilDeSauron.Domain.Services;
 using OeuilDeSauron.Infrastructure.Files;
 using Polly;
@@ -24,32 +25,18 @@ namespace OeuilDeSauron.Controllers;
 [Route("api/health-check")]
 public class HealthCheckController : ControllerBase
 {
-    private readonly IMyHealthCheck _healthCheck;
-    private readonly MonitoringContext _context;
+    private readonly IMediator _mediator;
 
-    public HealthCheckController(IMyHealthCheck healthCheck, MonitoringContext context)
+    public HealthCheckController(IMediator mediator)
     {
-        _healthCheck = healthCheck;
-        _context = context;
+        _mediator = mediator;
     }
 
     [HttpGet("{projectId}")]
     public async Task<IActionResult> CheckHealth(string projectId)
     {
-        var project = await _context.Projects.FindAsync(projectId);
-        if (project == null)
-        {
-            return NotFound("Project not found.");
-        }
-
-        var request = new HealthCheckRequest
-        {
-            Name = project.Name,
-            Url = project.HealthcheckUrl,
-            Headers = project.Headers
-        };
-
-        var result = await _healthCheck.CheckHealthAsync(request);
+       var query = new GetApiHealthQuery(projectId);
+        var result = await _mediator.Send(query);
         return Ok(result);
     }
 

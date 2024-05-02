@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using OeuilDeSauron.Data;
-using OeuilDeSauron.Domain.Queries.Projects;
+using OeuilDeSauron.Domain.Queries.ProjectQueries;
 using OeuilDeSauron.Models;
 
 namespace OeuilDeSauron.Domain.Handlers.ProjectHandlers
