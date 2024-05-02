@@ -10,6 +10,7 @@ namespace Models
 {
     public class ApiHealth
     {
+        public string Id { get; set; }= Guid.NewGuid().ToString();
         public Project Project { get; set; }
         public string ProjectId { get; set; }
         public string ProjectName { get; set; }

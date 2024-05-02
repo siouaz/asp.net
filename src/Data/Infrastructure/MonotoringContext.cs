@@ -9,6 +9,7 @@ using OeuilDeSauron.Data.Identity;
 using OeuilDeSauron.Data.Infrastructure.Configuration;
 using OeuilDeSauron.Data.Items;
 using OeuilDeSauron.Models;
+using Models;
 
 
 namespace OeuilDeSauron.Data
@@ -19,6 +20,7 @@ namespace OeuilDeSauron.Data
         {
         }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<ApiHealth> ApiHealths { get; set; }
         public DbSet<List> Lists { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<User> Users { get; set; }
