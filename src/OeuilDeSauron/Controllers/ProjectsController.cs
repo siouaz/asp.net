@@ -20,16 +20,13 @@ namespace OeuilDeSauron.Controllers
     [ApiController]
     public class ProjectsController : ControllerBase
     {
-        private readonly MonitoringContext _context;
         private readonly IMediator _mediator;
 
-        public ProjectsController(MonitoringContext context,IMediator mediator)
+        public ProjectsController(IMediator mediator)
         {
-            _context = context;
             _mediator = mediator;
         }
 
-        // GET: api/Projects
         [HttpGet]
         public async Task<IActionResult> GetProjects()
         {
@@ -38,7 +35,6 @@ namespace OeuilDeSauron.Controllers
             return Ok(projects);
         }
 
-        // POST: api/Projects
         [HttpPost]
         public async Task<IActionResult> PostProject([FromBody] Project project)
         {
@@ -47,7 +43,6 @@ namespace OeuilDeSauron.Controllers
             return Ok(projectCreated);
         }
 
-        // GET: api/Projects/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProject(string id)
         {
@@ -61,30 +56,20 @@ namespace OeuilDeSauron.Controllers
             return Ok(project);
         }
 
-        // PUT: api/Projects/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProject(string id, [FromBody] Project project)
         {
-            if (id != project.Id)
-            {
-                return BadRequest();
-            }
-            _context.Entry(project).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            var command = new UpdateProjectCommand(id,project);
+            await _mediator.Send(command);
             return NoContent();
         }
 
-        // DELETE: api/Projects/5
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProject(string id)
         {
-            var project = await _context.Projects.FindAsync(id);
-            if (project == null)
-            {
-                return NotFound();
-            }
-            _context.Projects.Remove(project);
-            await _context.SaveChangesAsync();
+            var command = new DeleteProjectCommand(id);
+            await _mediator.Send(command);
             return NoContent();
         }
     }
