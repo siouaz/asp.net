@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Models;
 using OeuilDeSauron.Domain.Interfaces;
 using OeuilDeSauron.Domain.Models;
 using RestSharp;
@@ -14,7 +15,7 @@ namespace OeuilDeSauron.Domain.Services
 {
     public class MyHealthCheck : IMyHealthCheck
     {
-        public async Task<HealthCheckResponse> CheckHealthAsync(HealthCheckRequest requestParameters)
+        public async Task<ApiHealth> CheckHealthAsync(HealthCheckRequest requestParameters)
         {
 
             var client = new RestClient();
@@ -29,10 +30,11 @@ namespace OeuilDeSauron.Domain.Services
             stopwatch.Stop();
 
             var duration = stopwatch.Elapsed;
-            var healthCheckResponse = new HealthCheckResponse
+            var ApiHealth = new ApiHealth
             {
                 Duration = duration,
-                Name=requestParameters.Name
+                ProjectName=requestParameters.ProjectName,
+                ProjectId=requestParameters.ProjectId
             };
             Dictionary<string, object> data = new Dictionary<string, object>
             {
@@ -43,14 +45,14 @@ namespace OeuilDeSauron.Domain.Services
 
             if (response.IsSuccessful)
             {
-                healthCheckResponse.HealthCheckResult = HealthCheckResult.Healthy("API Healthy , Up and Running", data);
+                ApiHealth.HealthCheckResult = HealthCheckResult.Healthy("API Healthy , Up and Running", data);
             }
             else
             {
-            healthCheckResponse.HealthCheckResult = HealthCheckResult.Unhealthy("API Unhealthy , Something went wrong .. see data for more details ..", response.ErrorException, data);
+            ApiHealth.HealthCheckResult = HealthCheckResult.Unhealthy("API Unhealthy , Something went wrong .. see data for more details ..", response.ErrorException, data);
             }
 
-            return healthCheckResponse;
+            return ApiHealth;
         }
        
     }

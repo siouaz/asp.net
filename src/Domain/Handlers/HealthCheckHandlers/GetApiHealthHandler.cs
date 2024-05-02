@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Azure.Core;
 using MediatR;
+using Models;
 using OeuilDeSauron.Data;
 using OeuilDeSauron.Domain.Interfaces;
 using OeuilDeSauron.Domain.Models;
@@ -16,7 +17,7 @@ using OeuilDeSauron.Models;
 namespace OeuilDeSauron.Domain.Handlers.HealthCheckHandlers
 {
 
-    public class GetApiHealthHandler : IRequestHandler<GetApiHealthQuery, HealthCheckResponse>
+    public class GetApiHealthHandler : IRequestHandler<GetApiHealthQuery, ApiHealth>
     {
         private readonly MonitoringContext _context;
         private readonly IMyHealthCheck _healthCheck;
@@ -26,7 +27,7 @@ namespace OeuilDeSauron.Domain.Handlers.HealthCheckHandlers
             _context = context;
             _healthCheck = healthCheck;
         }
-        public async Task<HealthCheckResponse> Handle(GetApiHealthQuery request, CancellationToken cancellationToken)
+        public async Task<ApiHealth> Handle(GetApiHealthQuery request, CancellationToken cancellationToken)
         {
             var project = await _context.Projects.FindAsync(request.ProjectId);
             if (project == null)
@@ -36,7 +37,8 @@ namespace OeuilDeSauron.Domain.Handlers.HealthCheckHandlers
 
             var healthCheckRequest = new HealthCheckRequest
             {
-                Name = project.Name,
+                ProjectId = project.Id,
+                ProjectName = project.Name,
                 Url = project.HealthcheckUrl,
                 Headers = project.Headers
             };
