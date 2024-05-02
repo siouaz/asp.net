@@ -8,7 +8,7 @@ using OeuilDeSauron.Models;
 
 namespace OeuilDeSauron.Domain.Queries.Projects
 {
-    public class GetAllProjectsQuery : IRequest<IAsyncEnumerator<Project>>
+    public class GetAllProjectsQuery : IRequest<List<Project>>
     {
     }
 }

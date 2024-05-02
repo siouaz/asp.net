@@ -11,7 +11,7 @@ using OeuilDeSauron.Models;
 
 namespace OeuilDeSauron.Domain.Handlers
 {
-    public class GetAllProjectsHandler : IRequestHandler<GetAllProjectsQuery, IAsyncEnumerator<Project>>
+    public class GetAllProjectsHandler : IRequestHandler<GetAllProjectsQuery, List<Project>>
     {
         private readonly MonitoringContext _context;
 
@@ -19,9 +19,9 @@ namespace OeuilDeSauron.Domain.Handlers
         {
             _context = context;
         }
-        public async Task<IAsyncEnumerator<Project>> Handle(GetAllProjectsQuery request, CancellationToken cancellationToken)
+        public async Task<List<Project>> Handle(GetAllProjectsQuery request, CancellationToken cancellationToken)
         {
-            var projects = _context.Projects.GetAsyncEnumerator();
+            var projects = _context.Projects.ToList();
             return projects;
         }
     }
