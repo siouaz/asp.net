@@ -5,9 +5,7 @@ using OeuilDeSauron.Data.Identity;
 
 namespace OeuilDeSauron.Data.Infrastructure.Configuration;
 
-/// <summary>
-/// <see cref="UserRoleConfiguration"/> entity configuration.
-/// </summary>
+
 public class UserRoleConfiguration : IEntityTypeConfiguration<UserRole>
 {
     public void Configure(EntityTypeBuilder<UserRole> builder)
