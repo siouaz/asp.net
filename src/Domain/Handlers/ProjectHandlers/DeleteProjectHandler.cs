@@ -10,7 +10,7 @@ using OeuilDeSauron.Domain.Commands.Project;
 using OeuilDeSauron.Domain.Queries.Projects;
 using OeuilDeSauron.Models;
 
-namespace OeuilDeSauron.Domain.Handlers
+namespace OeuilDeSauron.Domain.Handlers.ProjectHandlers
 {
     public class DeleteProjectHandler : IRequestHandler<DeleteProjectCommand, bool>
     {
@@ -25,7 +25,7 @@ namespace OeuilDeSauron.Domain.Handlers
             var project = await _context.Projects.FindAsync(request.Id);
             if (project == null)
             {
-               throw new NullReferenceException(nameof(project));
+                throw new NullReferenceException(nameof(project));
             }
             _context.Projects.Remove(project);
             await _context.SaveChangesAsync();

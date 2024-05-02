@@ -7,7 +7,7 @@ using MediatR;
 using OeuilDeSauron.Data;
 using OeuilDeSauron.Models;
 
-namespace OeuilDeSauron.Domain.Queries.Projects
+namespace OeuilDeSauron.Domain.Queries.ProjectQueries
 {
     public class GetProjectQuery : IRequest<Project>
     {

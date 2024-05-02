@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MediatR;
 using OeuilDeSauron.Models;
 
-namespace OeuilDeSauron.Domain.Queries.Projects
+namespace OeuilDeSauron.Domain.Queries.ProjectQueries
 {
     public class GetAllProjectsQuery : IRequest<List<Project>>
     {

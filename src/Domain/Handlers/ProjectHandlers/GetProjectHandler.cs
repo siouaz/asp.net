@@ -9,13 +9,13 @@ using OeuilDeSauron.Data;
 using OeuilDeSauron.Domain.Queries.Projects;
 using OeuilDeSauron.Models;
 
-namespace OeuilDeSauron.Domain.Handlers
+namespace OeuilDeSauron.Domain.Handlers.ProjectHandlers
 {
     public class GetProjectHandler : IRequestHandler<GetProjectQuery, Project>
     {
         private readonly MonitoringContext _context;
 
-        public GetProjectHandler( MonitoringContext context)
+        public GetProjectHandler(MonitoringContext context)
         {
             _context = context;
         }

@@ -13,7 +13,7 @@ using OeuilDeSauron.Domain.Commands.Project;
 using OeuilDeSauron.Domain.Queries.Projects;
 using OeuilDeSauron.Models;
 
-namespace OeuilDeSauron.Domain.Handlers
+namespace OeuilDeSauron.Domain.Handlers.ProjectHandlers
 {
     public class UpdateProjectHandler : IRequestHandler<UpdateProjectCommand, bool>
     {

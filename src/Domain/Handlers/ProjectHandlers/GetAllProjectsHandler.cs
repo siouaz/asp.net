@@ -9,7 +9,7 @@ using OeuilDeSauron.Data;
 using OeuilDeSauron.Domain.Queries.Projects;
 using OeuilDeSauron.Models;
 
-namespace OeuilDeSauron.Domain.Handlers
+namespace OeuilDeSauron.Domain.Handlers.ProjectHandlers
 {
     public class GetAllProjectsHandler : IRequestHandler<GetAllProjectsQuery, List<Project>>
     {

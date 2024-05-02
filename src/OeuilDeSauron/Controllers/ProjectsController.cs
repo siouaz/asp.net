@@ -8,8 +8,8 @@ using OeuilDeSauron.Domain.Models;
 using OeuilDeSauron.Data;
 using OeuilDeSauron.Models;
 using MediatR;
-using OeuilDeSauron.Domain.Queries.Projects;
-using OeuilDeSauron.Domain.Commands.Project;
+using OeuilDeSauron.Domain.Queries.ProjectQueries;
+using OeuilDeSauron.Domain.Commands.ProjectCommands;
 
 
 

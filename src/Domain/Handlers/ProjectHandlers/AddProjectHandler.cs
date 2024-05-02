@@ -10,7 +10,7 @@ using OeuilDeSauron.Domain.Commands.Project;
 using OeuilDeSauron.Domain.Queries.Projects;
 using OeuilDeSauron.Models;
 
-namespace OeuilDeSauron.Domain.Handlers
+namespace OeuilDeSauron.Domain.Handlers.ProjectHandlers
 {
     public class AddProjectHandler : IRequestHandler<AddProjectCommand, Project>
     {
@@ -24,7 +24,7 @@ namespace OeuilDeSauron.Domain.Handlers
         {
             _context.Projects.Add(request.Project);
             await _context.SaveChangesAsync();
-            
+
             var project = await _context.Projects.FindAsync(request.Project.Id);
             if (project == null)
             {

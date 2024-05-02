@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace OeuilDeSauron.Domain.Commands.Project
+namespace OeuilDeSauron.Domain.Commands.ProjectCommands
 {
     public class DeleteProjectCommand : IRequest<bool>
     {
