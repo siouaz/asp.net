@@ -5493,11 +5493,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Data\\Data.csproj",
+      "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Data\\Data.csproj",
       "packagesPath": "C:\\Users\\ademb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Data\\obj\\",
+      "outputPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ademb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5514,8 +5514,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\Models\\Models.csproj"
+            "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\Models\\Models.csproj"
             }
           }
         }

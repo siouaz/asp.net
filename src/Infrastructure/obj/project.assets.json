@@ -4708,11 +4708,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\ademb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ademb\\AppData\\Roaming\\NuGet\\NuGet.Config",
