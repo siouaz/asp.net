@@ -540,3 +540,4 @@ C:\Users\ademb\OneDrive\Bureau\OeuilDeSauron\src\OeuilDeSauron\obj\Debug\net8.0\
 C:\Users\ademb\OneDrive\Bureau\OeuilDeSauron\src\OeuilDeSauron\obj\Debug\net8.0\OeuilDeSauron.genruntimeconfig.cache
 C:\Users\ademb\OneDrive\Bureau\OeuilDeSauron\src\OeuilDeSauron\obj\Debug\net8.0\ref\OeuilDeSauron.dll
 C:\Users\ademb\OneDrive\Bureau\OeuilDeSauron\src\OeuilDeSauron\bin\net8.0\RestSharp.dll
+C:\Users\ademb\OneDrive\Bureau\asp.net\src\OeuilDeSauron\bin\net8.0\RestSharp.dll
