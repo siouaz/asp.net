@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+$primary-color: #5D93E1;
+$secondary-color: #FF2E63;
+$dark-theme-background: #1E2022;
+$light-theme-background: #F7F7FF;
+:root {
+  --color-white: #fff;
+  --color-info-dark: #304052; 
+  --color-info-light: #a2a8bf; 
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+.container {
+      text-align: center;
+    }
+    
+    .button {
+  background-color:transparent;
+  border-radius: 15px;
+  padding: 8px;
+  color:white;
+  border: none;
+  transition: background-color 0.3s ease;
+    }
+  .button:hover {
+  background-color: #3c1065; /* Set the desired background color when hovered */
+  color: white; /* Set the desired text color when hovered */
+}
+
+html{
+ font-size: 14px;
+}
+
+body{
+ width: 100vw;
+ height: 100vh;
+ font-family: poppins, sans-serif;
+ font-size: 0.88rem;
+  color:white;
+ background-color: var(--color-background);
+ user-select: none;
+ overflow-x: hidden;
+ 
+}
+
+.sidebar {
+      height: 1000px;
+      width: 150px;
+      background-color: #273d57;
+      padding: 20px;
+      position: absolute;
+      border-radius: 10px;
+    }
+.content {
+      margin-left: 230px; 
+      padding: 12px;
+      
+    }
+
+.container{
+ display: grid;
+ width: 100%;
+ margin: 0 auto;
+ gap: 1.8rem;
+ grid-template-columns: 15rem auto 5rem;
+  
+}
+
+a{
+ color: var(--color-dark);
+}
+
+img{
+ display: block;
+ width: 100%;
+}
+
+h1{
+ font-weight: 800;
+ font-size: 1.8rem;
+}
+
+h2{
+ font-size: 1.4rem;
+}
+
+h3{
+ font-size: 0.87rem;
+}
+
+h4{
+ font-size: 0.8rem;
+}
+
+
+
+.text-muted{
+ color: var(--color-info-dark);
+}
+
+p{
+ color: var(--color-dark-variant);
+}
+
+b{
+ color: var(--color-dark);
+}
+
+.primary{
+ color: var(--color-primary);
+}
+
+aside{
+height: 139vh;
+
+}
+
+aside .top{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-top: 1.2rem;
+}
+
+aside .logo{
+ display: flex;
+ gap: 0.8rem;
+}
+
+aside .logo img{
+ width: 2rem;
+ height: 2rem;
+}
+
+aside .close{
+ display:none;
+}
+
+aside h3{
+ font-weight: 500;
+}
+
+aside .sidebar a{
+ display: flex;
+ color: var(--color-info-dark);
+ margin-left: 2rem;
+ gap: 1rem;
+ align-items: center;
+ position: relative;
+ height: 3.7rem;
+ transition: all 300ms ease;
+}
+
+aside .sidebar a span{
+ font-size: 1.6rem;
+ transition: all 300ms ease;
+}
+
+aside.sidebar a:last-child{
+ position: absolute;
+ bottom: 1rem;
+ width: 100%;
+ 
+}
+aside .sidebar a:last-child h3 {
+  color: #FFFFFF;
+}
+aside .sidebar a:last-child .material-icons-sharp {
+  color: #FFFFFF; 
+}
+
+aside.sidebar a.active{
+ background: var(--color-light);
+ color: var(--color-primary);
+ margin-left: 0;
+}
+
+aside.sidebar a.active:before{
+content: '';
+width: 6px;
+height: 100%;
+background: var(--color-primary);
+}
+
+aside .sidebar a.active span{
+ color: var(--color-primary);
+ margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover{
+ color: var(--color-primary);
+}
+
+aside .sidebar a:hover span{
+ margin-left: 1rem;
+}
+
+aside .sidebar .message-count{
+ background: var(--color-danger);
+ color: var(--color-white);
+ padding: 2px 10px;
+ font-size: 11px;
+ border-radius: var(border-radius-1);
+}
+
+main{
+ margin-top: 1.4rem;
+}
+
+
+
+
+
+main .project{
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ gap: 1.6rem;
+}
+
+    
+
+
+
+
+
+
+
+
+

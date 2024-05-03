@@ -1,0 +1,53 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.navbar{
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  .container-fluid {
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    padding: 8px 16px;
+  }
+}
+
+.navbar-brand{
+  background-color: #fff; 
+  border-radius: 20px;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #273d57; 
+  &:hover{
+    color: #a2a8bf;;
+  }
+  
+}
+
+.navbar-nav .nav-link {
+  color: #555555; 
+  &:hover{
+    color: #777777;;
+  }
+}
+
+.navbar-nav .nav-link:hover {
+  color: #777777; 
+}
+
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: inline-block;
+    background-color: #f8f9fa; 
+  }
+  mat-menu {
+    .mat-menu-item {
+      font-size: 1rem;
+      padding: 8px 20px;
+    }
+}
+}
