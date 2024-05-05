@@ -249,5 +249,12 @@
     "C:\\Users\\Monem\\.nuget\\packages\\z.entityframework.plus.efcore\\8.102.1.1\\z.entityframework.plus.efcore.8.102.1.1.nupkg.sha512",
     "C:\\Users\\Monem\\.nuget\\packages\\z.expressions.eval\\6.1.1\\z.expressions.eval.6.1.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\OeuilDeSauron\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
