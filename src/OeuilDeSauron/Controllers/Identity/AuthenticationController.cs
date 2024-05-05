@@ -4,13 +4,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
-
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
-
+using Microsoft.Identity.Web;
 using OeuilDeSauron.Data.Identity;
 using OeuilDeSauron.Domain;
 using OeuilDeSauron.Domain.Identity;
@@ -32,24 +33,27 @@ public class AuthenticationController : ControllerBase
     private readonly SignInManager<User> _signInManager;
     private readonly UserManager<User> _userManager;
     private readonly IUserQueries _userQueries;
+    private readonly IOptionsMonitor<MicrosoftIdentityOptions> _optionsMonitor;
 
     private IdentityOptions Options { get; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="AuthenticationController"/> class.
     /// </summary>
-    public AuthenticationController(IConfiguration configuration, IMailer mailer, IOptions<IdentityOptions> options,
+    public AuthenticationController(IConfiguration configuration/*, IMailer mailer*/, IOptions<IdentityOptions> options,
         IResources resources,
         SignInManager<User> signInManager,
         UserManager<User> userManager,
-        IUserQueries userQueries)
+        IUserQueries userQueries,
+        IOptionsMonitor<MicrosoftIdentityOptions> microsoftIdentityOptionsMonitor)
     {
         _configuration = configuration;
-        _mailer = mailer;
+        //_mailer = mailer;
         _resources = resources;
         _signInManager = signInManager;
         _userManager = userManager;
         _userQueries = userQueries;
+        _optionsMonitor = microsoftIdentityOptionsMonitor;
 
         Options = options.Value;
     }
@@ -200,7 +204,38 @@ public class AuthenticationController : ControllerBase
 
         return Ok();
     }
+    [HttpGet("azure-login")]
+    public IActionResult Login(string returnUrl = "/")
+    {
+        var scheme = OpenIdConnectDefaults.AuthenticationScheme;
+        string redirect;
+        if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+        {
+            redirect = returnUrl;
+        }
+        else
+        {
+            redirect = Url.Content("~/")!;
+        }
 
+        return Challenge(
+            new AuthenticationProperties { RedirectUri = redirect },
+            scheme);
+    }
+
+    [HttpGet("external-login-callback")]
+    public async Task<IActionResult> ExternalLoginCallback(string returnUrl = "/")
+    {
+        var result = await HttpContext.AuthenticateAsync(OpenIdConnectDefaults.AuthenticationScheme);
+        if (result?.Succeeded != true)
+        {
+            return BadRequest(new { error = "Failed to authenticate with Azure AD." });
+        }
+
+        // Use the user's identity information here, e.g., result.Principal.Identity.Name
+
+        return LocalRedirect(returnUrl);
+    }
     #region Helpers
 
     private void AddErrors(IdentityResult result)

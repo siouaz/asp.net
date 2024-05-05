@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Domain\\Domain.csproj": {}
+    "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\Models\\Models.csproj": {
+    "C:\\Users\\Monem\\Source\\Repos\\asp.net\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\ademb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\Models\\obj\\",
+        "projectPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\Monem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ademb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Monem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -87,21 +92,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Data\\Data.csproj": {
+    "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\ademb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Data\\obj\\",
+        "projectPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\Monem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ademb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Monem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -115,8 +120,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\Models\\Models.csproj"
+              "C:\\Users\\Monem\\Source\\Repos\\asp.net\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\Models\\Models.csproj"
               }
             }
           }
@@ -125,6 +130,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -194,21 +204,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Domain\\Domain.csproj": {
+    "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\ademb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Monem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ademb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Monem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -222,11 +232,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Data\\Data.csproj"
+              "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Data\\Data.csproj"
               },
-              "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -235,6 +245,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -316,21 +331,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\ademb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\OeuilDeSauron\\src\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Monem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ademb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Monem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -350,6 +365,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -422,7 +442,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

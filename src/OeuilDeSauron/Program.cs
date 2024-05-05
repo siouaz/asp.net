@@ -38,6 +38,10 @@ using System.Net;
 using OeuilDeSauron.Data;
 using System.Configuration;
 using OeuilDeSauron.Domain.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Identity.Web;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 var supportedCultures = new List<CultureInfo> { new("fr-FR") };
@@ -54,13 +58,16 @@ builder.Host.UseSerilog((context, configuration) =>
 builder.Services.AddApplicationInsightsTelemetry();
 builder.Services.AddApplicationInsightsTelemetryProcessor<ExcludeRequestTelemetryProcessor>();
 
+
+
+
 // Mini Profiler
 builder.Services.AddMiniProfiler(options =>
-    {
-        options.RouteBasePath = "/profiler";
-        options.ResultsAuthorize = request => request.HttpContext.User.Identity is not null && request.HttpContext.User.Identity.IsAuthenticated && request.HttpContext.User.IsAdmin();
-        options.ResultsListAuthorize = request => request.HttpContext.User.Identity is not null && request.HttpContext.User.Identity.IsAuthenticated && request.HttpContext.User.IsAdmin();
-    })
+{
+    options.RouteBasePath = "/profiler";
+    options.ResultsAuthorize = request => request.HttpContext.User.Identity is not null && request.HttpContext.User.Identity.IsAuthenticated && request.HttpContext.User.IsAdmin();
+    options.ResultsListAuthorize = request => request.HttpContext.User.Identity is not null && request.HttpContext.User.Identity.IsAuthenticated && request.HttpContext.User.IsAdmin();
+})
     .AddEntityFramework();
 
 if (builder.Environment.IsDevelopment())
@@ -126,8 +133,9 @@ if (!builder.Environment.IsDevelopment())
 // Cache
 builder.Services.AddDistributedMemoryCache();
 
+
 // Authentication
-builder.Services.AddAuthentication()
+builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
         options.Authority = string.Empty;
@@ -141,7 +149,13 @@ builder.Services.AddAuthentication()
             ValidateIssuer = false,
             ValidateAudience = false
         };
-    });
+    }).AddMicrosoftIdentityWebApp(builder.Configuration, "AzureAd");
+
+builder.Services.Configure<CookieAuthenticationOptions>(OpenIdConnectDefaults.CookieNoncePrefix, options =>
+{
+    options.Cookie.Name = "TestApp";
+});
+
 builder.Services.ConfigureApplicationCookie(options =>
     options.Events.OnRedirectToAccessDenied =
         options.Events.OnRedirectToLogin = c =>
@@ -188,6 +202,7 @@ builder.Services.AddMailing(builder.Environment);
 
 // Fluent Validation
 builder.Services.AddFluentValidationClientsideAdapters();
+builder.Services.AddSwaggerGen();
 
 // Mvc
 builder.Services.AddMvc()
@@ -208,6 +223,8 @@ if (app.Environment.IsDevelopment())
     // Exception Handling
     app.UseDeveloperExceptionPage();
     app.UseMigrationsEndPoint();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 else
 {
