@@ -27,6 +27,7 @@ namespace OeuilDeSauron.Data
         public DbSet<ItemRelation> ItemRelations { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
 
+
     }
 }
 
