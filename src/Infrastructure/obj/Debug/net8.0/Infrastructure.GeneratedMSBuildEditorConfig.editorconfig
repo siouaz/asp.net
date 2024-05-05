@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OeuilDeSauron.Infrastructure
-build_property.ProjectDir = C:\Users\ademb\OneDrive\Bureau\OeuilDeSauron\src\Infrastructure\
+build_property.ProjectDir = C:\Users\Monem\Source\Repos\asp.net\src\Infrastructure\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
