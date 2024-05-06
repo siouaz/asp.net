@@ -13,7 +13,7 @@
 *.v2
 *.config
 *.pdb
-*.cashe
+*.cache
 *.user
 *.userosscache
 *.sln.docstates
