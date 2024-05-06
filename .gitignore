@@ -9,6 +9,11 @@
 # User-specific files
 *.rsuser
 *.suo
+*.dll
+*.v2
+*.config
+*.pdb
+*.cache
 *.user
 *.userosscache
 *.sln.docstates
