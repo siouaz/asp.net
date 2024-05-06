@@ -31,7 +31,7 @@ namespace OeuilDeSauron.Models
         [Required]
         [EmailAddress]
         public string AssignedTo { get; set; }
-
+        
         public bool IsActive { get; set; }
 
         // Store the serialized dictionary

@@ -12087,19 +12087,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Monem\\.nuget\\packages\\": {}
+    "C:\\Users\\monem_zb1qylh\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\OeuilDeSauron\\OeuilDeSauron.csproj",
+      "projectUniqueName": "C:\\Users\\monem_zb1qylh\\source\\repos\\asp.net\\src\\OeuilDeSauron\\OeuilDeSauron.csproj",
       "projectName": "OeuilDeSauron",
-      "projectPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\OeuilDeSauron\\OeuilDeSauron.csproj",
-      "packagesPath": "C:\\Users\\Monem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\OeuilDeSauron\\obj\\",
+      "projectPath": "C:\\Users\\monem_zb1qylh\\source\\repos\\asp.net\\src\\OeuilDeSauron\\OeuilDeSauron.csproj",
+      "packagesPath": "C:\\Users\\monem_zb1qylh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\monem_zb1qylh\\source\\repos\\asp.net\\src\\OeuilDeSauron\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Monem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\monem_zb1qylh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12113,11 +12118,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Data\\Data.csproj"
+            "C:\\Users\\monem_zb1qylh\\source\\repos\\asp.net\\src\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\monem_zb1qylh\\source\\repos\\asp.net\\src\\Data\\Data.csproj"
             },
-            "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\Domain\\Domain.csproj"
+            "C:\\Users\\monem_zb1qylh\\source\\repos\\asp.net\\src\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\monem_zb1qylh\\source\\repos\\asp.net\\src\\Domain\\Domain.csproj"
             }
           }
         }
@@ -12283,16 +12288,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Monem\\Source\\Repos\\asp.net\\src\\OeuilDeSauron\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
