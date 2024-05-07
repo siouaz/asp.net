@@ -17,6 +17,7 @@ namespace Models
         public Project Project { get; set; }
         public string ProjectName { get; set; }
         public TimeSpan Duration { get; set; }
+        public string DateTime {  get; set; }
 
         // Serialized version of HealthCheckResult
         public string HealthCheckResultData { get; set; }
