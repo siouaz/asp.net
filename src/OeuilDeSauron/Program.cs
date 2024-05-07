@@ -42,6 +42,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Identity.Web;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using OeuilDeSauron.Domain.Jobs;
 
 var builder = WebApplication.CreateBuilder(args);
 var supportedCultures = new List<CultureInfo> { new("fr-FR") };
@@ -91,10 +92,8 @@ builder.Services.AddHangfire(config => config.UseSqlServerStorage(dbConnectionSt
 //        tags: new[] { "Azure", "Storage" })
 //    .AddHangfire(options => options.MaximumJobsFailed = 1, "Hangfire", tags: new[] { "Hangfire" });
 
-//builder.Services.AddHealthChecks()
-//    .AddCheck<ChuckNorrisHealthCheck>("Chuck Norris API");
-
 builder.Services.AddScoped<IMyHealthCheck, MyHealthCheck>();
+builder.Services.AddScoped<HealthCheckJob>();
 
 // Inject MediatR to our DI
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly));

@@ -12,14 +12,13 @@ namespace OeuilDeSauron.Domain.Jobs
 {
     public class HealthCheckJob
     {
-        private readonly IHttpClientFactory _httpClientFactory;
         private readonly MonitoringContext _dbContext;
         private readonly IMediator _mediator;
 
-        public HealthCheckJob(IHttpClientFactory httpClientFactory, MonitoringContext dbContext)
+        public HealthCheckJob(MonitoringContext dbContext, IMediator mediator)
         {
-            _httpClientFactory = httpClientFactory;
             _dbContext = dbContext;
+            _mediator = mediator;
         }
 
         public async Task RunAsync(string projectId)
