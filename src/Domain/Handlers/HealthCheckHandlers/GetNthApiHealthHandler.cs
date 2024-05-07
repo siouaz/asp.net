@@ -28,7 +28,7 @@ namespace OeuilDeSauron.Domain.Handlers.HealthCheckHandlers
         }
         public async Task<List<ApiHealth>> Handle(GetNthApiHealthQuery request, CancellationToken cancellationToken)
         {
-           var result = _context.ApiHealths.OrderBy(a=>a.DateTime).Take(request.ChecksNumber).ToList();
+           var result = _context.ApiHealths.OrderByDescending(a=>a.DateTime).Take(request.ChecksNumber).ToList();
             return result;
         }
     }
