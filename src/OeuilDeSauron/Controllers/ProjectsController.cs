@@ -10,6 +10,9 @@ using OeuilDeSauron.Models;
 using MediatR;
 using OeuilDeSauron.Domain.Queries.ProjectQueries;
 using OeuilDeSauron.Domain.Commands.ProjectCommands;
+using Hangfire;
+using OeuilDeSauron.Domain.Queries.CheckHealthQueries;
+using OeuilDeSauron.Domain.Jobs;
 
 
 
@@ -21,10 +24,12 @@ namespace OeuilDeSauron.Controllers
     public class ProjectsController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly HealthCheckJob _healthCheckJob;
 
-        public ProjectsController(IMediator mediator)
+        public ProjectsController(IMediator mediator, HealthCheckJob healthCheckJob)
         {
             _mediator = mediator;
+            _healthCheckJob = healthCheckJob;
         }
 
         [HttpGet]
@@ -35,11 +40,22 @@ namespace OeuilDeSauron.Controllers
             return Ok(projects);
         }
 
+
+
         [HttpPost]
         public async Task<IActionResult> PostProject([FromBody] Project project)
         {
             var command = new AddProjectCommand(project);
             var projectCreated = await _mediator.Send(command);
+
+            var query = new GetApiHealthQuery(project.Id);
+
+            if (project.IsActive)
+            {
+                RecurringJob.AddOrUpdate($"HealthCheckJob_{project.Id}", () => _healthCheckJob.RunAsync(project.Id), Cron.MinuteInterval(project.DurationInMinute));
+            }
+
+
             return Ok(projectCreated);
         }
 
@@ -61,6 +77,14 @@ namespace OeuilDeSauron.Controllers
         {
             var command = new UpdateProjectCommand(id,project);
             await _mediator.Send(command);
+            if (project.IsActive)
+            {
+                RecurringJob.AddOrUpdate($"HealthCheckJob_{project.Id}", () => _healthCheckJob.RunAsync(project.Id), Cron.MinuteInterval(project.DurationInMinute));
+            }
+            else
+            {
+                RecurringJob.RemoveIfExists($"HealthCheckJob_{project.Id}");
+            }
             return NoContent();
         }
 
@@ -68,6 +92,7 @@ namespace OeuilDeSauron.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProject(string id)
         {
+            RecurringJob.RemoveIfExists($"HealthCheckJob_{id}");
             var command = new DeleteProjectCommand(id);
             await _mediator.Send(command);
             return NoContent();

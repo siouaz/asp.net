@@ -33,6 +33,7 @@ namespace OeuilDeSauron.Models
         public string AssignedTo { get; set; }
         
         public bool IsActive { get; set; }
+        public int DurationInMinute { get; set; }
 
         // Store the serialized dictionary
         public string HeadersSerialized { get; set; }
