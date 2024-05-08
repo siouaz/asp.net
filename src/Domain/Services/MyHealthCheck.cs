@@ -73,7 +73,7 @@ namespace OeuilDeSauron.Domain.Services
                 if (project.SendMailIfUnhealthy)
                 {
                 var subject = $"Your WebSite {project.Name} API Is Unhealthy";
-                var body = $"Your WebSite API Is Unhealthy , check your account for more details , {response.ErrorMessage}";
+                var body = $"Your WebSite API Is Unhealthy , check your account for more details , {response.ErrorException}";
                 await _emailSender.SendEmailAsync(project.AssignedTo,subject,body);
                 }
             }
