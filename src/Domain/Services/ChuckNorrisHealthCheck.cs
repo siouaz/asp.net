@@ -45,11 +45,18 @@ namespace OeuilDeSauron.Domain.Services
 
             if (response.IsSuccessful)
             {
-                ApiHealth.HealthCheckResult = HealthCheckResult.Healthy("API Healthy , Up and Running", data);
+                if (duration.TotalSeconds > requestParameters.ResponseTime)
+                {
+                    ApiHealth.HealthCheckResult = HealthCheckResult.Unhealthy($"Warning ! API Healthy But Response Time Superior than Max Duration {duration.TotalSeconds}",response.ErrorException, data);
+                }
+                else
+                {
+                    ApiHealth.HealthCheckResult = HealthCheckResult.Healthy("API Healthy , Up and Running", data);
+                }
             }
             else
             {
-            ApiHealth.HealthCheckResult = HealthCheckResult.Unhealthy("API Unhealthy , Something went wrong .. see data for more details ..", response.ErrorException, data);
+                ApiHealth.HealthCheckResult = HealthCheckResult.Unhealthy($"API Unhealthy , Something went wrong .. see data for more details .. Duration {duration.TotalSeconds}", response.ErrorException, data);
             }
 
             return ApiHealth;
