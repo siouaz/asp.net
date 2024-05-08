@@ -243,6 +243,10 @@ namespace OeuilDeSauron.Data.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("DateTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<TimeSpan>("Duration")
                         .HasColumnType("time");
 
@@ -363,6 +367,9 @@ namespace OeuilDeSauron.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CheckFrequency")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DurationInMinute")
                         .HasColumnType("int");
 
                     b.Property<string>("HeadersSerialized")

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\monem_zb1qylh\\source\\repos\\asp.net\\src\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\monem_zb1qylh\\source\\repos\\asp.net\\src\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\monem_zb1qylh\\source\\repos\\asp.net\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\monem_zb1qylh\\source\\repos\\asp.net\\src\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\monem_zb1qylh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\monem_zb1qylh\\source\\repos\\asp.net\\src\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ademb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ademb\\OneDrive\\Bureau\\asp.net\\src\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\monem_zb1qylh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ademb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -115,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

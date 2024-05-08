@@ -39,6 +39,11 @@ public class HealthCheckController : ControllerBase
         var result = await _mediator.Send(query);
         return Ok(result);
     }
-
-
+    [HttpGet("{projectId}/{checksNumber}")]
+    public async Task<IActionResult> GetNthChecks(string projectId,int checksNumber)
+    {
+        var query = new GetNthApiHealthQuery(projectId,checksNumber);
+        var result = await _mediator.Send(query);
+        return Ok(result);
+    }
 }

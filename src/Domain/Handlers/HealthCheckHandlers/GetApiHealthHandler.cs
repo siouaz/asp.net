@@ -8,6 +8,7 @@ using Azure.Core;
 using MediatR;
 using Models;
 using OeuilDeSauron.Data;
+using OeuilDeSauron.Domain.Commands.ApiHealthCommands;
 using OeuilDeSauron.Domain.Interfaces;
 using OeuilDeSauron.Domain.Models;
 using OeuilDeSauron.Domain.Queries.CheckHealthQueries;
@@ -21,11 +22,13 @@ namespace OeuilDeSauron.Domain.Handlers.HealthCheckHandlers
     {
         private readonly MonitoringContext _context;
         private readonly IMyHealthCheck _healthCheck;
+        private readonly IMediator _mediator;
 
-        public GetApiHealthHandler(MonitoringContext context, IMyHealthCheck healthCheck)
+        public GetApiHealthHandler(MonitoringContext context, IMyHealthCheck healthCheck,IMediator mediator)
         {
             _context = context;
             _healthCheck = healthCheck;
+            _mediator = mediator;
         }
         public async Task<ApiHealth> Handle(GetApiHealthQuery request, CancellationToken cancellationToken)
         {
@@ -44,6 +47,9 @@ namespace OeuilDeSauron.Domain.Handlers.HealthCheckHandlers
             };
 
             var result = await _healthCheck.CheckHealthAsync(healthCheckRequest);
+            //add the ApiHealth to the Db
+            var command = new AddApiHealthCommand(result);
+            var test = await _mediator.Send(command);
             return result;
         }
     }
