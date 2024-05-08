@@ -79,8 +79,9 @@ namespace OeuilDeSauron.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProject(string id, [FromBody] Project project)
+        public async Task<IActionResult> PutProject(string id, [FromBody] ProjectRequest ProjectRequest)
         {
+            var project = _mapper.Map<ProjectRequest, Project>(ProjectRequest);
             var command = new UpdateProjectCommand(id,project);
             await _mediator.Send(command);
             if (project.IsActive)
