@@ -10,6 +10,7 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Models;
 using OeuilDeSauron.Domain.Interfaces;
 using OeuilDeSauron.Domain.Models;
+using OeuilDeSauron.Models;
 using RestSharp;
 
 namespace OeuilDeSauron.Domain.Services
@@ -21,13 +22,13 @@ namespace OeuilDeSauron.Domain.Services
         {
             _emailSender = emailSender;
         }
-        public async Task<ApiHealth> CheckHealthAsync(HealthCheckRequest requestParameters)
+        public async Task<ApiHealth> CheckHealthAsync(Project project)
         {
 
             var client = new RestClient();
 
-            var request = new RestRequest(requestParameters.Url, Method.Get);
-            foreach(var headerItem in requestParameters.Headers)
+            var request = new RestRequest(project.HealthcheckUrl, Method.Get);
+            foreach(var headerItem in project.Headers)
             {
                 request.AddHeader(headerItem.Key,headerItem.Value);
             }
@@ -39,8 +40,8 @@ namespace OeuilDeSauron.Domain.Services
             var ApiHealth = new ApiHealth
             {
                 Duration = duration,
-                ProjectName=requestParameters.ProjectName,
-                ProjectId=requestParameters.ProjectId
+                ProjectName= project.Name,
+                ProjectId= project.Id
             };
             Dictionary<string, object> data = new Dictionary<string, object>
             {
@@ -51,9 +52,15 @@ namespace OeuilDeSauron.Domain.Services
 
             if (response.IsSuccessful)
             {
-                if (duration.TotalSeconds > requestParameters.ResponseTime)
+                if (duration.TotalSeconds > project.MaxResponseTimeInSecond)
                 {
                     ApiHealth.HealthCheckResult = HealthCheckResult.Unhealthy($"Warning ! API Healthy But Response Time Superior than Max Duration {duration.TotalSeconds}",response.ErrorException, data);
+                    if (project.SendMailIfUnhealthy)
+                    {
+                        var subject = $"Your WebSite {project.Name} API Is Unhealthy";
+                        var body = $"Your WebSite API Is Unhealthy , check your account for more details , Response Time Superior than Max Duration {duration.TotalSeconds}";
+                        await _emailSender.SendEmailAsync(project.AssignedTo, subject, body);
+                    }
                 }
                 else
                 {
@@ -63,9 +70,12 @@ namespace OeuilDeSauron.Domain.Services
             else
             {
                 ApiHealth.HealthCheckResult = HealthCheckResult.Unhealthy($"API Unhealthy , Something went wrong .. see data for more details .. Duration {duration.TotalSeconds}", response.ErrorException, data);
-                var subject = $"Your WebSite {requestParameters.ProjectName} API Is Unhealthy";
+                if (project.SendMailIfUnhealthy)
+                {
+                var subject = $"Your WebSite {project.Name} API Is Unhealthy";
                 var body = $"Your WebSite API Is Unhealthy , check your account for more details , {response.ErrorMessage}";
-                await _emailSender.SendEmailAsync(requestParameters.ProjectMail,subject,body);
+                await _emailSender.SendEmailAsync(project.AssignedTo,subject,body);
+                }
             }
 
             return ApiHealth;
