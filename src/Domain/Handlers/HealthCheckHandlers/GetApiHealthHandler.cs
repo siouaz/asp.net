@@ -42,6 +42,8 @@ namespace OeuilDeSauron.Domain.Handlers.HealthCheckHandlers
             {
                 ProjectId = project.Id,
                 ProjectName = project.Name,
+                ResponseTime=project.MaxResponseTimeInSecond,
+                ProjectMail=project.AssignedTo,
                 Url = project.HealthcheckUrl,
                 Headers = project.Headers
             };

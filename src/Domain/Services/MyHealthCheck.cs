@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Models;
 using OeuilDeSauron.Domain.Interfaces;
@@ -15,6 +16,11 @@ namespace OeuilDeSauron.Domain.Services
 {
     public class MyHealthCheck : IMyHealthCheck
     {
+        private readonly IEmailSender _emailSender;
+        public MyHealthCheck(IEmailSender emailSender)
+        {
+            _emailSender = emailSender;
+        }
         public async Task<ApiHealth> CheckHealthAsync(HealthCheckRequest requestParameters)
         {
 
@@ -57,6 +63,9 @@ namespace OeuilDeSauron.Domain.Services
             else
             {
                 ApiHealth.HealthCheckResult = HealthCheckResult.Unhealthy($"API Unhealthy , Something went wrong .. see data for more details .. Duration {duration.TotalSeconds}", response.ErrorException, data);
+                var subject = $"Your WebSite {requestParameters.ProjectName} API Is Unhealthy";
+                var body = $"Your WebSite API Is Unhealthy , check your account for more details , {response.ErrorMessage}";
+                await _emailSender.SendEmailAsync(requestParameters.ProjectMail,subject,body);
             }
 
             return ApiHealth;

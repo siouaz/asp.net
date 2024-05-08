@@ -11,6 +11,7 @@ namespace OeuilDeSauron.Domain.Models
         public string ProjectId { get; set; }
         public string ProjectName { get; set; }
         public int ResponseTime { get; set; }
+        public string ProjectMail { get; set; }
         public string Url { get; set; }
         public IDictionary<string, string> Headers { get; set; }
     }

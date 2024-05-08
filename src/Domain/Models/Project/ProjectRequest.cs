@@ -25,6 +25,9 @@ namespace OeuilDeSauron.Domain.Models.Project
         public string AssignedTo { get; set; }
         [Required]
         public bool IsActive { get; set; }
+        public bool SendMailIfUnhealthy { get; set; }
+        public bool SendSMSIfUnhealthy { get; set; }
+        public bool SendTeamsNotificationIfUnhealthy { get; set; }
         [Required]
         public int DurationInMinute { get; set; }
         [Required]

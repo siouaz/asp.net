@@ -33,6 +33,9 @@ namespace OeuilDeSauron.Models
         public string AssignedTo { get; set; }
         
         public bool IsActive { get; set; }
+        public bool SendMailIfUnhealthy { get; set; }
+        public bool SendSMSIfUnhealthy { get; set; }
+        public bool SendTeamsNotificationIfUnhealthy { get; set; }
         public int DurationInMinute { get; set; }
         public int MaxResponseTimeInSecond { get; set; }
 
