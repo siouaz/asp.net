@@ -43,6 +43,7 @@ using Microsoft.Identity.Web;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using OeuilDeSauron.Domain.Jobs;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var supportedCultures = new List<CultureInfo> { new("fr-FR") };
@@ -94,6 +95,7 @@ builder.Services.AddHangfire(config => config.UseSqlServerStorage(dbConnectionSt
 
 builder.Services.AddScoped<IMyHealthCheck, MyHealthCheck>();
 builder.Services.AddScoped<HealthCheckJob>();
+builder.Services.AddScoped<IEmailSender, EmailSenderService>();
 
 // Inject MediatR to our DI
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly));

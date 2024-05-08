@@ -38,15 +38,8 @@ namespace OeuilDeSauron.Domain.Handlers.HealthCheckHandlers
                 throw new NullReferenceException(nameof(request));
             }
 
-            var healthCheckRequest = new HealthCheckRequest
-            {
-                ProjectId = project.Id,
-                ProjectName = project.Name,
-                Url = project.HealthcheckUrl,
-                Headers = project.Headers
-            };
 
-            var result = await _healthCheck.CheckHealthAsync(healthCheckRequest);
+            var result = await _healthCheck.CheckHealthAsync(project);
             //add the ApiHealth to the Db
             var command = new AddApiHealthCommand(result);
             var test = await _mediator.Send(command);

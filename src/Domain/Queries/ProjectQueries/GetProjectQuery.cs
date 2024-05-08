@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 using OeuilDeSauron.Data;
+using OeuilDeSauron.Domain.Models.Project;
 using OeuilDeSauron.Models;
 
 namespace OeuilDeSauron.Domain.Queries.ProjectQueries
 {
-    public class GetProjectQuery : IRequest<Project>
+    public class GetProjectQuery : IRequest<ProjectResponse>
     {
         public string ProjectId { get; }
 

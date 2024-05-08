@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OeuilDeSauron.Data;
 
@@ -11,9 +12,11 @@ using OeuilDeSauron.Data;
 namespace OeuilDeSauron.Data.Migrations
 {
     [DbContext(typeof(MonitoringContext))]
-    partial class MonitoringContextModelSnapshot : ModelSnapshot
+    [Migration("20240508081005_AddResponseTimeToProject")]
+    partial class AddResponseTimeToProject
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -389,15 +392,6 @@ namespace OeuilDeSauron.Data.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("SendMailIfUnhealthy")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("SendSMSIfUnhealthy")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("SendTeamsNotificationIfUnhealthy")
-                        .HasColumnType("bit");
 
                     b.Property<string>("SiteUrl")
                         .IsRequired()
