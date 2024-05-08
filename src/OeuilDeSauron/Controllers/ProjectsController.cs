@@ -13,6 +13,9 @@ using OeuilDeSauron.Domain.Commands.ProjectCommands;
 using Hangfire;
 using OeuilDeSauron.Domain.Queries.CheckHealthQueries;
 using OeuilDeSauron.Domain.Jobs;
+using OeuilDeSauron.Domain.Models.Project;
+using Azure.Core;
+using AutoMapper;
 
 
 
@@ -25,11 +28,13 @@ namespace OeuilDeSauron.Controllers
     {
         private readonly IMediator _mediator;
         private readonly HealthCheckJob _healthCheckJob;
+        private readonly IMapper _mapper;
 
-        public ProjectsController(IMediator mediator, HealthCheckJob healthCheckJob)
+        public ProjectsController(IMediator mediator, HealthCheckJob healthCheckJob,IMapper mapper)
         {
             _mediator = mediator;
             _healthCheckJob = healthCheckJob;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -43,8 +48,9 @@ namespace OeuilDeSauron.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> PostProject([FromBody] Project project)
+        public async Task<IActionResult> PostProject([FromBody] ProjectRequest projectRequest)
         {
+            var project = _mapper.Map<ProjectRequest, Project>(projectRequest);
             var command = new AddProjectCommand(project);
             var projectCreated = await _mediator.Send(command);
 

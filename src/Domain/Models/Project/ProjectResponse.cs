@@ -9,26 +9,17 @@ using Newtonsoft.Json;
 
 namespace OeuilDeSauron.Domain.Models.Project
 {
-    public class ProjectRequest
+    public class ProjectResponse
     {
-        [Required]
+        public string Id { get; set; }
         public string Name { get; set; }
-
-        [Required]
         public string HealthcheckUrl { get; set; }
-
-        [Required]
         public string SiteUrl { get; set; }
-
-        [Required]
-        [EmailAddress]
         public string AssignedTo { get; set; }
-        [Required]
         public bool IsActive { get; set; }
-        [Required]
         public int DurationInMinute { get; set; }
-        [Required]
         public int MaxResponseTimeInSecond { get; set; }
         public string HeadersSerialized { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
     }
 }

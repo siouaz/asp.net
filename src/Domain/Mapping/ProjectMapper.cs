@@ -13,5 +13,6 @@ public class ProjectMapper : Profile
     public ProjectMapper()
     {
         CreateMap<Project, ProjectRequest>().ReverseMap();
+        CreateMap< ProjectRequest,Project>().ReverseMap();
     }
 }
