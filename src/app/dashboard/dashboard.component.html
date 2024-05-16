@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard de Gestion de projets</title>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+ <link rel="stylesheet" href="dashboard.component.scss"/>
+ 
+</head>
+<body>
+  <app-navbar></app-navbar>
+  <div class="container">
+    
+    <aside>
+      <div class="top">
+
+    <div class="close" id="close-btn">
+     <span class="material-icons-sharp">close</span>
+    </div>
+   </div>
+    <br>
+    <div class="sidebar"> 
+      <div class="logo">
+      <img src="/assets/images/logo.png" alt="logo entreprise" style="max-height: 70px; width: auto; height: auto;margin-left: auto; margin-right: auto; display: block;" alt="logo">
+      
+    </div>
+    <br>
+    <button class="button">Dashboard</button>
+   <br>
+   <br>
+   <button class="button" routerLink="/Notifications">Notification</button>
+   <br>
+   <br>
+  <button class="button" routerLink="/heakthcheck">Healthcheck</button>
+    <br>
+    <br>
+    <button class="button" routerLink="/Settings">Settings</button>
+   <br>
+   <br>
+   
+    <a href="#">
+     <span class="material-icons-sharp">
+      logout
+     </span>
+     <h3>Logout</h3>
+    </a>
+    </div>
+  </aside>
+  <main style="display: flex; align-items: center; justify-content: center; height: 60vh;">
+  <!-- Ajout d'une section de statistiques dans le dashboard -->
+<div class="stats-container">
+  <div class="stat">
+    <h3>Projets Actifs</h3>
+    <p>{{ activeProjectsCount }}</p>
+  </div>
+  <div class="stat">
+    <h3>Projets Inactifs</h3>
+    <p>{{ inactiveProjectsCount }}</p>
+  </div>
+</div>
+
+<!-- Bouton pour ajouter un nouveau projet -->
+<button class="button" (click)="showAddProjectForm = true">Ajouter un Projet</button>
+
+<!-- Formulaire d'ajout de projet -->
+<div *ngIf="showAddProjectForm" class="add-project-form">
+  <form (submit)="addProject()">
+    <input type="text" [(ngModel)]="newProject.name" name="name" placeholder="Nom du projet" required>
+    <input type="url" [(ngModel)]="newProject.healthCheckUrl" name="healthCheckUrl" placeholder="URL Healthcheck" required>
+    <input type="url" [(ngModel)]="newProject.siteUrl" name="siteUrl" placeholder="URL du site" required>
+    <input type="number" [(ngModel)]="newProject.checkFrequency" name="checkFrequency" placeholder="Fréquence de check (en minutes)" required>
+    <input type="number" [(ngModel)]="newProject.assignedTo" name="assignedPersons" placeholder="Nombre de personnes affectées" required>
+    <button type="submit">Soumettre</button>
+  </form>
+</div>
+<app-project-list></app-project-list>
+  
+  
+  </main>
+  
+  
+  </div>
+  
+  
+</body>
+</html>
+ 

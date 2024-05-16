@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LoginIncorrectCredentials" xml:space="preserve">
+    <value>Le nom d'utilisateur ou le mot de passe est incorrect</value>
+  </data>
+  <data name="LoginUsernameRequired" xml:space="preserve">
+    <value>Le nom d'utilisateur est obligatoire</value>
+  </data>
+  <data name="LoginPasswordRequired" xml:space="preserve">
+    <value>Le mot de passe est obligatoire</value>
+  </data>
+  <data name="LoginPasswordLength" xml:space="preserve">
+    <value>La longueur du mot de passe doit être comprise entre 8 et 64 caractères</value>
+  </data>
+  <data name="PageContentRequired" xml:space="preserve">
+    <value>Le contenu est obligatoire.</value>
+  </data>
+  <data name="PageDuplicate" xml:space="preserve">
+    <value>Une page existe déjà avec ce titre</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>La page que vous essayer de charger ou modifier est introuvable</value>
+  </data>
+  <data name="PageTitleRequired" xml:space="preserve">
+    <value>Le titre est obligatoire.</value>
+  </data>
+  <data name="ResetPasswordIdRequired" xml:space="preserve">
+    <value>L'identifiant de l'utilisateur est obligatoire</value>
+  </data>
+  <data name="ResetPasswordTokenRequired" xml:space="preserve">
+    <value>Le jeton de réinitialisation du mot de passe est obligatoire</value>
+  </data>
+  <data name="ResetPasswordPasswordRequired" xml:space="preserve">
+    <value>Le nouveau mot de passe est obligatoire</value>
+  </data>
+  <data name="ResetPasswordPasswordLength" xml:space="preserve">
+    <value>La longueur du mot de passe doit être comprise entre 8 et 64 caractères</value>
+  </data>
+  <data name="ResetPasswordPasswordConfirmMatch" xml:space="preserve">
+    <value>Veuillez saisir le même mot de passe pour la confirmation</value>
+  </data>
+  <data name="ResetPasswordEmailSubject" xml:space="preserve">
+    <value>DataPulvés - Réinitialisation de votre mot de passe</value>
+  </data>
+  <data name="UserLocked" xml:space="preserve">
+    <value>Votre compte est temporairement vérouillé. Il sera réactivé dans</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>Utilisateur non trouvé. Veuillez vérifier votre nom d'utilisateur ou votre email</value>
+  </data>
+  <data name="UserWithoutEmail" xml:space="preserve">
+    <value>Vous ne possédez pas une adresse mail. Veuillez contacter un administrateur pour réinitialiser votre mot de passe</value>
+  </data>
+  <data name="DependentItem" xml:space="preserve">
+    <value>La suppression de la référence est impossible car elle est utilisée dans  une dépendance.</value>
+  </data>
+  <data name="UniqueKeyException" xml:space="preserve">
+    <value>Le code de la référence est existant.</value>
+  </data>
+  <data name="DeniedListEdit" xml:space="preserve">
+    <value>La liste n'est pas editable.</value>
+  </data>
+  <data name="ItemCodeRequired" xml:space="preserve">
+    <value>Le code de la référence est obligatoire.</value>
+  </data>
+  <data name="ItemKeyRequired" xml:space="preserve">
+    <value>L'identifiant  de la référence est obligatoire.</value>
+  </data>
+  <data name="ItemListIdRequired" xml:space="preserve">
+    <value>L'identifiant de la liste de la référence est obligatoire.</value>
+  </data>
+  <data name="ItemNameRequired" xml:space="preserve">
+    <value>Le nom de la référence est obligatoire.</value>
+  </data>
+  <data name="SprayerBrandRequired" xml:space="preserve">
+    <value>L'identifiant de la marque est obligatoire.</value>
+  </data>
+  <data name="SprayerCategoryRequired" xml:space="preserve">
+    <value>L'identifiant de la catégorie est obligatoire.</value>
+  </data>
+  <data name="SprayerConstructionYearRequired" xml:space="preserve">
+    <value>L'année de construction est obligatoire.</value>
+  </data>
+  <data name="SprayerHitchRequired" xml:space="preserve">
+    <value>L'identifiant de l'attelage est obligatoire.</value>
+  </data>
+  <data name="SprayerModelRequired" xml:space="preserve">
+    <value>Le modèle est obligatoire.</value>
+  </data>
+  <data name="SprayerNumberRequired" xml:space="preserve">
+    <value>Le numéro d'immatriculation est obligatoire.</value>
+  </data>
+  <data name="SprayerOperationRequired" xml:space="preserve">
+    <value>L'identifiant du fonctionnement est obligatoire.</value>
+  </data>
+  <data name="SprayerRegulationRequired" xml:space="preserve">
+    <value>L'identifiant de la régulation est obligatoire.</value>
+  </data>
+  <data name="SprayerTypeRequired" xml:space="preserve">
+    <value>L'identifiant du type est obligatoire.</value>
+  </data>
+  <data name="SprayerVolumeRequired" xml:space="preserve">
+    <value>Le volume de la cuve est obligatoire.</value>
+  </data>
+  <data name="SprayerWorkingWidthRequired" xml:space="preserve">
+    <value>L'identifiant de la largeur du travail est obligatoire.</value>
+  </data>
+  <data name="UniqueSprayerNumber" xml:space="preserve">
+    <value>Le numéro d'immatriculation est existant.</value>
+  </data>
+  <data name="SprayerConcurrencyStampException" xml:space="preserve">
+    <value>Le pulvérisateur a été  modifié. Veuillez actualiser la page.</value>
+  </data>
+  <data name="EquipmentConcurencyStampException" xml:space="preserve">
+    <value>L'équipement a été  modifié. Veuillez actualiser la page.</value>
+  </data>
+  <data name="UniqueEquipmentNumberException" xml:space="preserve">
+    <value>Le numéro d'immatriculation est existant.</value>
+  </data>
+  <data name="EquipmentCategoryRequired" xml:space="preserve">
+    <value>L'identifiant de la catégorie est obligatoire.</value>
+  </data>
+  <data name="EquipmentNumberRequired" xml:space="preserve">
+    <value>Le numéro d'immatriculation est obligatoire.</value>
+  </data>
+  <data name="EquipmentTypeRequired" xml:space="preserve">
+    <value>L'identifiant du type est obligatoire.</value>
+  </data>
+  <data name="EquipmentWorkingWidthRequired" xml:space="preserve">
+    <value>L'identifiant de la largeur du travail est obligatoire.</value>
+  </data>
+  <data name="EquipmentSprayerRequired" xml:space="preserve">
+    <value>L'identifiant du pulvérisateur est obligatoire.</value>
+  </data>
+  <data name="SprayerPreviousException" xml:space="preserve">
+    <value>Vous ne pouvez pas ajouter une ancienne immatriculation au pluverisateur.</value>
+  </data>
+  <data name="EquipmentProhibtedDeletion" xml:space="preserve">
+    <value>La suppression d'équipement est impossible.</value>
+  </data>
+  <data name="SprayerProhibtedDeletion" xml:space="preserve">
+    <value>La suppression du pulvérisateur est impossible.</value>
+  </data>
+  <data name="InvalidCertification" xml:space="preserve">
+    <value>L'inspecteur n'a pas une certification valide.</value>
+  </data>
+  <data name="SearchInspectorBirthDateRequired" xml:space="preserve">
+    <value>La date de naissance est obligatoire.</value>
+  </data>
+  <data name="SearchInspectorFisrtNameRequired" xml:space="preserve">
+    <value>Le nom est obligatoire.</value>
+  </data>
+  <data name="SearchInspectorLastNameRequired" xml:space="preserve">
+    <value>Le prénom est obligatoire.</value>
+  </data>
+  <data name="ControlActivityRequired" xml:space="preserve">
+    <value>L'activité de l'exploitant est obligatoire.</value>
+  </data>
+  <data name="ControlCityRequired" xml:space="preserve">
+    <value>La commune du contrôle est obligatoire.</value>
+  </data>
+  <data name="ControlConclusionRequired" xml:space="preserve">
+    <value>La conclusion du contrôle est obligatoire.</value>
+  </data>
+  <data name="ControlDateRequired" xml:space="preserve">
+    <value>La date du contrôle est obligatoire.</value>
+  </data>
+  <data name="ControlDepartmentRequired" xml:space="preserve">
+    <value>Le departement du contrôle est obligatoire.</value>
+  </data>
+  <data name="ControlEquipmentRequired" xml:space="preserve">
+    <value>L'equipement du contrôle est obligatoire.</value>
+  </data>
+  <data name="ControlFaultRequired" xml:space="preserve">
+    <value>le défaut est obligatoire.</value>
+  </data>
+  <data name="ControlFaultTypeRequired" xml:space="preserve">
+    <value>Le type du défaut est obligatoire.</value>
+  </data>
+  <data name="ControlFlowRateRequired" xml:space="preserve">
+    <value>Le débit du contrôle est obligatoire.</value>
+  </data>
+  <data name="ControlImpossibleCauseRequired" xml:space="preserve">
+    <value>La cause d'impossible du défaut est obligatoire.</value>
+  </data>
+  <data name="ControlNozzleOperationRequired" xml:space="preserve">
+    <value>Le buse de fonctionnement du contrôle  est obligatoire.</value>
+  </data>
+  <data name="ControlNozzleRequired" xml:space="preserve">
+    <value>Le type de buse du contrôle  est obligatoire.</value>
+  </data>
+  <data name="ControlPreControlRequired" xml:space="preserve">
+    <value>Le précontrôle est obligatoire.</value>
+  </data>
+  <data name="ControlReportSubmissionDateRequired" xml:space="preserve">
+    <value>La date de remise du contrôle est obligatoire.</value>
+  </data>
+  <data name="ControlSprayerRequired" xml:space="preserve">
+    <value>Le sprayer du contrôle est obligatoire.</value>
+  </data>
+  <data name="ControlStructureRequired" xml:space="preserve">
+    <value>Le pulvérisateur du contrôle est obligatoire.</value>
+  </data>
+  <data name="ControlTypeRequired" xml:space="preserve">
+    <value>Le type du contrôle est obligatoire.</value>
+  </data>
+  <data name="ControlUsageModeIdRequired" xml:space="preserve">
+    <value>Le mode d'utilisation du contrôle est obligatoire.</value>
+  </data>
+  <data name="DuplicatedFault" xml:space="preserve">
+    <value>Des défauts duppliqués</value>
+  </data>
+  <data name="DuplicatedSprayer" xml:space="preserve">
+    <value>Un autre contrôle avec la même date, type, conclusion et inspecteur a été déjà effectué sur ce pulvérisateur.</value>
+  </data>
+  <data name="DuplicatedEquipment" xml:space="preserve">
+    <value>Un autre contrôle avec la même date, type, conclusion et inspecteur a été déjà effectué sur cet équipement.</value>
+  </data>
+  <data name="ControlReportSubmissionDateGreater" xml:space="preserve">
+    <value>La date de remise du rapport de contrôle est inférieure à celle du contrôle.</value>
+  </data>
+  <data name="ExpiredDelayToUpdateControl" xml:space="preserve">
+    <value>La modification  d'un contrôle est possible au maximum un jour après sa création. Veuillez contacter un administrateur.</value>
+  </data>
+  <data name="InvalidInspector" xml:space="preserve">
+    <value>L’inspecteur n'a pas une certification valide.</value>
+  </data>
+  <data name="InvalidStructure" xml:space="preserve">
+    <value>L’organisme d’inspection n'est pas agréé lors du jour du contrôle technique.</value>
+  </data>
+  <data name="ControlAuthor" xml:space="preserve">
+    <value>Vous n'êtes pas l'auteur du contrôle technique.</value>
+  </data>
+  <data name="ControlConcurrencyStampException" xml:space="preserve">
+    <value>Le contrôle technique a été  modifié. Veuillez actualiser la page.</value>
+  </data>
+  <data name="AssignedUser" xml:space="preserve">
+    <value>L'inspecteur est déja affecté à l'organisme d'inspection.</value>
+  </data>
+  <data name="CertificationCodeRequired" xml:space="preserve">
+    <value>Le code de la certification est obligatoire.</value>
+  </data>
+  <data name="CertificationNameRequired" xml:space="preserve">
+    <value>Le nom de la certification est obligatoire.</value>
+  </data>
+  <data name="CertificationScopesRequired" xml:space="preserve">
+    <value>Les portées de la certification est obligatoire.</value>
+  </data>
+  <data name="CertificationUniqueCode" xml:space="preserve">
+    <value>Le code de la certification doit etre unique.</value>
+  </data>
+  <data name="DependentCertification" xml:space="preserve">
+    <value>La suppression de la certification est impossible car elle est utilisée dans  une dépendance.</value>
+  </data>
+  <data name="CertificationReadOnlyCode" xml:space="preserve">
+    <value>Le code de la certification est non modifiable.</value>
+  </data>
+  <data name="DependantStructure" xml:space="preserve">
+    <value>La suppression de la structure est impossible car elle est utilisée dans  une dépendance.</value>
+  </data>
+  <data name="StructureAddressRequired" xml:space="preserve">
+    <value>L'addresse  de la structure est obligatoire.</value>
+  </data>
+  <data name="StructureCityRequired" xml:space="preserve">
+    <value>La commune de la structure est obligatoire.</value>
+  </data>
+  <data name="StructureNameRequired" xml:space="preserve">
+    <value>Le nom de la structure est obligatoire.</value>
+  </data>
+  <data name="StructurePhoneNumberRequired" xml:space="preserve">
+    <value>Le numéro de téléphone de la structure est obligatoire.</value>
+  </data>
+  <data name="StructureTypeRequired" xml:space="preserve">
+    <value>Le type de la structure est obligatoire.</value>
+  </data>
+  <data name="StructureZipCodeRequired" xml:space="preserve">
+    <value>Le code zip de la structure est obligatoire.</value>
+  </data>
+  <data name="UserStructureLoginRequired" xml:space="preserve">
+    <value>Le login du rattachement est obligatoire.</value>
+  </data>
+  <data name="UserStructureStartDateRequired" xml:space="preserve">
+    <value>Les dates de début des associations auprès des structures sont obligatoire.</value>
+  </data>
+  <data name="UserStructureStructureIdRequired" xml:space="preserve">
+    <value>L'identifiant de la structure est obligatoire.</value>
+  </data>
+  <data name="UserStructureUserIdRequired" xml:space="preserve">
+    <value>L'utilisateur à rattacher est obligatoire.</value>
+  </data>
+  <data name="AgreementAdmissibilityDateRequired" xml:space="preserve">
+    <value>La date d'admissiblité de l'agrément  est obligatoire.</value>
+  </data>
+  <data name="AgreementInactiveRequired" xml:space="preserve">
+    <value>l'état de l'agrément  est obligatoire.</value>
+  </data>
+  <data name="AgreementItemAgreementRequired" xml:space="preserve">
+    <value>L'dentifiant de l'agrément </value>
+  </data>
+  <data name="AgreementItemStartDateRequired" xml:space="preserve">
+    <value>La date de début d'accréditation est obligatoire.</value>
+  </data>
+  <data name="AgreementItemTypeRequired" xml:space="preserve">
+    <value>Le type d'accréditation est obligatoire.</value>
+  </data>
+  <data name="AgreementNumberExistent" xml:space="preserve">
+    <value>Le numéro d'identification de l'agrément est existant.</value>
+  </data>
+  <data name="AgreementNumberRequired" xml:space="preserve">
+    <value>Le numéro de l'agrément  est obligatoire.</value>
+  </data>
+  <data name="AgreementRequestDateRequired" xml:space="preserve">
+    <value>La date de demande de l'agrément  est obligatoire.</value>
+  </data>
+  <data name="AgreementStructureRequired" xml:space="preserve">
+    <value>L'identifiant de la structure  est obligatoire.</value>
+  </data>
+  <data name="AgreementValidityDateRequired" xml:space="preserve">
+    <value>La date  de validité de l'agrément  est obligatoire.</value>
+  </data>
+  <data name="NotAllowed" xml:space="preserve">
+    <value>Vous n'avez pas le droit de gérer l'agrément.</value>
+  </data>
+  <data name="UsedAgreement" xml:space="preserve">
+    <value>L'agrément est utilisé par un controle technique.</value>
+  </data>
+  <data name="AcquisitionDateGreaterThanExpiryDate" xml:space="preserve">
+    <value>La date d'expiration ne doit pas être inférieur à la date d'acquisition</value>
+  </data>
+  <data name="AcquisitionDateRequired" xml:space="preserve">
+    <value>La date d'acquisition est obligatoire</value>
+  </data>
+  <data name="ActiveRequired" xml:space="preserve">
+    <value>Le statut actif/inactif est obligatoire</value>
+  </data>
+  <data name="BirthDateRequired" xml:space="preserve">
+    <value>La date de naissance est obligatoire</value>
+  </data>
+  <data name="ConfirmLoginPasswordRequired" xml:space="preserve">
+    <value>La confirmation du mot de passe est obligatoire</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>L'email est obligatoire</value>
+  </data>
+  <data name="ExpiryDateRequired" xml:space="preserve">
+    <value>La date d'expiration est obligatoire</value>
+  </data>
+  <data name="FirstNameRequired" xml:space="preserve">
+    <value>Le prénom est obligatoire</value>
+  </data>
+  <data name="LastNameRequired" xml:space="preserve">
+    <value>Le nom est obligatoire</value>
+  </data>
+  <data name="TrainingCenterRequired" xml:space="preserve">
+    <value>Le centre de formation est obligatoire</value>
+  </data>
+  <data name="AddedUserEmailSubject" xml:space="preserve">
+    <value>OeuilDeSauron - Création d'un compte</value>
+  </data>
+  <data name="ExistentEmail" xml:space="preserve">
+    <value>L'adresse électronique existe déjà. Veillez la modifier.</value>
+  </data>
+  <data name="OldPasswordIncorrect" xml:space="preserve">
+    <value>Ancien mot de passe est incorrect. Veuillez vérifier votre ancien mot de passe.</value>
+  </data>
+  <data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>Le mot de passe à confirmer est obligatoire.</value>
+  </data>
+  <data name="NewPasswordLength" xml:space="preserve">
+    <value>La longueur du mot de passe doit être comprise entre 8 et 64 caractères</value>
+  </data>
+  <data name="NewPasswordRequired" xml:space="preserve">
+    <value>Le nouveau mot de passe est obligatoire.</value>
+  </data>
+  <data name="OldPasswordRequired" xml:space="preserve">
+    <value>L'ancien mot de passe est obligatoire.</value>
+  </data>
+  <data name="UserIdRequired" xml:space="preserve">
+    <value>L'utilisateur est obligatoire.</value>
+  </data>
+  <data name="NewPasswordPattern" xml:space="preserve">
+    <value>Le mot de passe doit contenir au moins un nombre, un caractère majuscule et un autre minuscule.</value>
+  </data>
+  <data name="HaveControls" xml:space="preserve">
+    <value>La suppression du rattachement est impossible car l'inspecteur a créé des controles.</value>
+  </data>
+  <data name="UserStructureNotFound" xml:space="preserve">
+    <value>L'utilisateur n'est pas attaché à l'organisme d'inspection.</value>
+  </data>
+  <data name="PasswordPasswordConfirmDontMatch" xml:space="preserve">
+    <value>Les champ mot de passe et confirmer mot de passe ne correspondent pas</value>
+  </data>
+  <data name="StructureRequired" xml:space="preserve">
+    <value>La structure est obligatoire.</value>
+  </data>
+  <data name="UserDisabled" xml:space="preserve">
+    <value>L'utilisateur est désactivé.</value>
+  </data>
+  <data name="UserStructureStartDateGreaterThanEndDate" xml:space="preserve">
+    <value>Les dates de fin ne peuvent pas être inférieur aux dates de début pour les associations auprès des structures.</value>
+  </data>
+  <data name="UserStructureRolesRequired" xml:space="preserve">
+    <value>Les associations auprès des structures doivent avoir au moins une responsabilité.</value>
+  </data>
+  <data name="NumberIncorrectLength" xml:space="preserve">
+    <value>L'identifiant doit contenir 10 caractères.</value>
+  </data>
+</root>
