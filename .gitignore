@@ -241,6 +241,7 @@ _pkginfo.txt
 !?*.[Cc]ache/
 
 # Others
+temp_auto_push.bat
 ClientBin/
 ~$*
 *~
@@ -388,11 +389,6 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 *.code-workspace
 
 # Local History for Visual Studio Code
@@ -490,3 +486,4 @@ $RECYCLE.BIN/
 
 # Configuration files
 *.config
+branch_structure.json
